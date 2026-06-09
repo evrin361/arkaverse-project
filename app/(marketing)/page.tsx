@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import ArkaLogo from "../components/ArkaLogo";
 
 
 // رجیستر کردن بومی در محیط کلاینت
@@ -30,12 +31,13 @@ export default function HomePage() {
       {/* هدر سایت */}
       <header className="border-b border-arkaText/10 backdrop-blur-md sticky top-0 z-50 bg-arkaBg/80">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          
-          {/* لوگو */}
-          <div ref={logoRef} className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-arkaCyan flex items-center justify-center font-bold text-arkaBg">A</div>
-            <span className="text-xl font-black tracking-wider text-white">Arka<span className="text-arkaCyan">Verse</span></span>
-          </div>
+ {/* لوگوی رسمی، مینی‌مال و یکپارچه آرکاورس */}
+<div ref={logoRef}>
+  <ArkaLogo />
+</div>
+
+
+
 
           {/* آیتم‌های منو */}
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
