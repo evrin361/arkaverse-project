@@ -67,10 +67,10 @@ export default function HomePage() {
             آینده مدیریت کسب‌وکار در دستان شما
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-black text-white leading-tight md:leading-snug">
-            خلق نظام‌مندی و <br className="hidden md:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-arkaCyan to-arkaGreen">مکانیزاسیون هوشمند</span> اداری
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-black text-white leading-tight md:leading-snug max-w-4xl mx-auto">
+  نظام‌مندی، مکانیزاسیون و راهبری سیستم‌های اداری و تجاری
+</h1>
+
           
           <p className="text-base md:text-lg text-arkaText/70 max-w-2xl mx-auto leading-relaxed">
             مجموعه آرکاوِرس (ArkaVerse) بستر راهبری سیستم‌های اداری و تجاری مدرن را بر پایه پایداری فراهم می‌کند.

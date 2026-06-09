@@ -2,13 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: {
-    template: "%s | ArkaVerse",
-    default: "ArkaVerse | آرکاورس",
-  },
-  description: "نظام‌مندی, مکانیزاسیون و راهبری سیستم‌های اداری و تجاری",
+  title: "ArkaVerse | نظام‌مندی، مکانیزاسیون و راهبری سیستم‌های اداری و تجاری",
+  description: "سایت رسمی مجموعه آرکاوِرس (ArkaVerse)",
   metadataBase: new URL("https://ArkaVerse.ir"),
 };
+
 
 export default function RootLayout({
   children,
