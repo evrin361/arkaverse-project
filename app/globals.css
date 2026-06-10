@@ -1,3 +1,8 @@
+@import "vazirmatn/Vazirmatn-font-face.css";
+
+html, body {
+  font-family: 'Vazirmatn', sans-serif !important;
+}
 @import "tailwindcss";
 
 @theme {
@@ -5,4 +10,14 @@
   --color-arkaCyan: #00F2FE;
   --color-arkaGreen: #05CD99;
   --color-arkaText: #E2E8F0;
+}
+@layer base {
+  html, body, *, h1, h2, p, span {
+    font-family: var(--font-vazirmatn), sans-serif !important;
+  }
+}
+
+/* رفع کامل مشکل نشانگر ماوس لوکال */
+*, *::before, *::after {
+  cursor: none !important;
 }

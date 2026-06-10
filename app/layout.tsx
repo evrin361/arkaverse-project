@@ -1,12 +1,39 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "ArkaVerse | نظام‌مندی، مکانیزاسیون و راهبری سیستم‌های اداری و تجاری",
-  description: "سایت رسمی مجموعه آرکاوِرس (ArkaVerse)",
-  metadataBase: new URL("https://ArkaVerse.ir"),
-};
+// ⚡ مپ کردن دقیق وزن‌های فونت بر اساس فایل‌های موجود در دایرکتوری شما
+const vazirmatn = localFont({
+  src: [
+    {
+      path: "../node_modules/vazirmatn/fonts/webfonts/Vazirmatn-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../node_modules/vazirmatn/fonts/webfonts/Vazirmatn-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../node_modules/vazirmatn/fonts/webfonts/Vazirmatn-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../node_modules/vazirmatn/fonts/webfonts/Vazirmatn-ExtraBold.woff2",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-vazirmatn",
+  display: "swap",
+});
 
+export const metadata: Metadata = {
+  title: "Arka Verse",
+  description: "Operational Excellence Framework",
+};
 
 export default function RootLayout({
   children,
@@ -14,13 +41,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa" dir="rtl">
-      <body
-        className="bg-arkaBg text-arkaText antialiased"
-        style={{
-          fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-        }}
-      >
+    <html lang="fa" dir="rtl" className={vazirmatn.variable}>
+      <body className="antialiased select-none bg-[#0B0F19]">
         {children}
       </body>
     </html>
