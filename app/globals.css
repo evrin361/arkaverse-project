@@ -17,7 +17,10 @@ html, body {
   }
 }
 
-/* رفع کامل مشکل نشانگر ماوس لوکال */
+/* رفع کامل مشکل نشانگر ماوس لوکال 
 *, *::before, *::after {
   cursor: none !important;
+} */
+ *, *::before, *::after {
+  cursor: auto;
 }

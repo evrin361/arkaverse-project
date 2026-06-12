@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from "fs";
+import path from "path";
 
 const phase4Content = `# 📑 مستندات فاز ۴: بهینه‌سازی رابط کاربری و موتور صدور فاکتور (RTL & Invoice Engine)
 
