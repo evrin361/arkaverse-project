@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-
+import { runtime } from "../src/runtime/arkasphere.runtime";
+import { orchestrator } from "../src/core/orchestrator/arka.orchestrator";
+orchestrator.init();
+runtime.boot();
 // ⚡ مپ کردن دقیق وزن‌های فونت بر اساس فایل‌های موجود در دایرکتوری شما
 const vazirmatn = localFont({
   src: [

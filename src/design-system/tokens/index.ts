@@ -11,3 +11,4 @@ export * from "./colors.tokens";
 export * from "./spacing.tokens";
 export * from "./radius.tokens";
 export * from "./motion";
+export * from "./visual.tokens";
