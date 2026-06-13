@@ -19,8 +19,11 @@ export default function DashboardPage() {
         boxShadow: render?.glow,
       }}
     >
+
+<h1>{Date.now()}</h1>
+
       <div className="text-3xl font-bold">
-        ARKASPHERE DASHBOARD
+        ARKAVERSE DASHBOARD
       </div>
     </div>
   );
