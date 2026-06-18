@@ -64,6 +64,7 @@ export const livingEngine = {
           glow: clickToggle ? "strong" : "soft",
           blur: clickToggle ? "sm" : "sm",
           duration: 180,
+          state: "active",
         };
 
       case "hover":
@@ -74,6 +75,7 @@ export const livingEngine = {
           glow: "medium",
           blur: "sm",
           duration: 220,
+          state: "interacting",
         };
 
       case "focus":
@@ -84,6 +86,7 @@ export const livingEngine = {
           glow: "strong",
           blur: "md",
           duration: 250,
+          state: "focused",
         };
 
       default:
@@ -94,6 +97,7 @@ export const livingEngine = {
           glow: "soft",
           blur: "sm",
           duration: 300,
+          state: "idle",
         };
     }
   },

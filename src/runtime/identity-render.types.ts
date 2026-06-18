@@ -6,6 +6,8 @@ export interface IdentityRenderOutput {
   blur: string;
   duration: number;
   intensity: string;
+  state: string;
+  
 }
 
 export interface IdentityRenderInput {

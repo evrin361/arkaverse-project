@@ -33,6 +33,11 @@ export default function DashboardPage() {
           Last Event: {dashboard.lastEvent ?? "-"}
         </div>
 
+<div className="mb-2">
+  State: {dashboard.state ?? "-"}
+</div>
+
+
         <div className="mb-2">
           Intensity: {render?.intensity ?? "-"}
         </div>

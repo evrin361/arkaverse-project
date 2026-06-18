@@ -10,6 +10,7 @@ export const identityRenderEngine = {
       blur: b.blur,
       duration: b.duration,
       intensity: b.intensity,
+      state: b.state,
     };
   },
 };

@@ -8,6 +8,7 @@ import { IdentityRenderOutput } from "./identity-render.types";
 
 type DashboardState = {
   lastEvent: UIEventType | null;
+  state: string | null;
 };
 
 export function useIdentityRender() {
@@ -15,9 +16,10 @@ export function useIdentityRender() {
     useState<IdentityRenderOutput | null>(null);
 
   const [dashboard, setDashboard] =
-    useState<DashboardState>({
-      lastEvent: null,
-    });
+  useState<DashboardState>({
+    lastEvent: null,
+    state: null,
+  });
 
   const trigger = (event: UIEventType) => {
     const behavior = orchestrator.handle(event);
@@ -29,8 +31,9 @@ export function useIdentityRender() {
     setRender(output);
 
     setDashboard({
-      lastEvent: event,
-    });
+  lastEvent: event,
+  state: output.state,
+});
   };
 
   return {
