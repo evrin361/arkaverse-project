@@ -190,44 +190,43 @@ Both routes currently render the Living Dashboard.
 
 # Latest Stable Commit
 
-9672654
+8156c42
 
-docs: add architecture status snapshot
+docs: freeze phase 8.2 completion snapshot
 
 ---
 
 # Current Phase
 
-Phase 8.1.1
+Phase 8.2
 
-Living Dashboard v1
+Complete.
 
-Completed.
+Achievements:
 
----
+* LivingState introduced
+* Visual State Mapping implemented
+* State propagated to render layer
+* State propagated to dashboard
+* State visible through ArkaOrb
+
+First visible system state achieved.
 
 # Next Phase
 
-Phase 8.2
+Phase 8.3
 
-Visual State Mapping
+Living Dashboard Expansion
 
-States to visualize:
+Goals:
 
-* idle
-* active
-* focused
-* interacting
+* Surface additional system state
+* Improve dashboard visibility
+* Strengthen Living System presentation
 
-Goal:
+The objective remains visibility.
 
-Map internal system state into visual Orb behavior.
-
-The objective is not animation.
-
-The objective is visibility.
-
----
+No new engine layers should be introduced without architectural review.
 
 # Development Rules
 
