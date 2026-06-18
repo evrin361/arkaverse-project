@@ -19,10 +19,11 @@ export default function DashboardPage() {
       className="min-h-screen flex flex-col items-center justify-center bg-black text-white gap-10"
     >
       <ArkaOrb
-        scale={render?.scale}
-        glow={render?.glow}
-        blur={render?.blur}
-      />
+  scale={render?.scale}
+  glow={render?.glow}
+  blur={render?.blur}
+  state={render?.state}
+/>
 
       <div className="text-3xl font-bold">
         ARKAVERSE DASHBOARD
