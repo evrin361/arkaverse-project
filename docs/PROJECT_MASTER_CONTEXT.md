@@ -129,6 +129,11 @@ ArkaOrb
 ↓
 Living Dashboard
 
+Runtime
+↓
+Runtime Inspector Engine
+↓
+Dashboard
 ---
 
 # Implemented Systems
@@ -159,6 +164,8 @@ Rendering
 
 * Identity Render Engine
 * useIdentityRender
+* Runtime Inspector Engine
+* useRuntimeInspector
 * Living Dashboard
 
 UI
@@ -190,43 +197,47 @@ Both routes currently render the Living Dashboard.
 
 # Latest Stable Commit
 
-8156c42
+d7c3bb4
 
-docs: freeze phase 8.2 completion snapshot
+docs: freeze phase 8.3 completion snapshot
 
 ---
 
 # Current Phase
 
-Phase 8.2
+Phase 8.3
 
 Complete.
 
 Achievements:
 
-* LivingState introduced
-* Visual State Mapping implemented
-* State propagated to render layer
-* State propagated to dashboard
-* State visible through ArkaOrb
+* Living State Visibility
+* Orb Visual Mapping
+* Runtime Inspector v1
+* Runtime State Visibility
+* Event History Visibility
+* Memory Visibility
 
-First visible system state achieved.
+Internal system activity is now visible through the Dashboard.
+
+No new engine layers were introduced.
+
 
 # Next Phase
 
-Phase 8.3
+Phase 8.4
 
-Living Dashboard Expansion
+To Be Defined
 
-Goals:
+Before implementation:
 
-* Surface additional system state
-* Improve dashboard visibility
-* Strengthen Living System presentation
+* Review architecture status
+* Review user-facing value
+* Define next visibility milestone
 
-The objective remains visibility.
+Priority remains:
 
-No new engine layers should be introduced without architectural review.
+Visibility before expansion.
 
 # Development Rules
 
