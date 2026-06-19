@@ -4,6 +4,7 @@ import "../../src/runtime/replay/replay-engine";
 import { useIdentityRender } from "../../src/runtime/useIdentityRender";
 import { ArkaOrb } from "../../src/components/arkaverse/ArkaOrb";
 import { useRuntimeInspector } from "../../src/runtime/useRuntimeInspector";
+import { useIdentityInspector } from "../../src/runtime/useIdentityInspector";
 
 export default function DashboardPage() {
   const {
@@ -11,6 +12,7 @@ export default function DashboardPage() {
     trigger,
     dashboard,
   } = useIdentityRender();
+  const identity = useIdentityInspector();
   const inspector = useRuntimeInspector();
 
 
@@ -19,6 +21,8 @@ export default function DashboardPage() {
       onMouseEnter={() => trigger("hover")}
       onMouseLeave={() => trigger("load")}
       onClick={() => trigger("click")}
+      onFocus={() => trigger("focus")}
+tabIndex={0}
       className="min-h-screen flex flex-col items-center justify-center bg-black text-white gap-10"
     >
       <ArkaOrb
@@ -66,6 +70,11 @@ export default function DashboardPage() {
 </div>
 
 
+
+<div className="mb-2">
+  Identity State: {identity.identityState}
+</div>
+
         <div className="mb-2">
           Intensity: {render?.intensity ?? "-"}
         </div>
@@ -85,6 +94,9 @@ export default function DashboardPage() {
         <div>
           Duration: {render?.duration ?? "-"}
         </div>
+
+
+        
       </div>
     </div>
   );

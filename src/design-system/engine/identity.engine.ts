@@ -14,6 +14,11 @@ export const identityEngine = {
     reactiveEngine.setState(state as ReactiveState);
   },
 
+getState() {
+  return this.state;
+},
+
+
   getVisual() {
     return reactiveEngine.getVisual();
   },
