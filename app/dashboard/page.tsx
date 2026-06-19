@@ -3,6 +3,7 @@
 import "../../src/runtime/replay/replay-engine";
 import { useIdentityRender } from "../../src/runtime/useIdentityRender";
 import { ArkaOrb } from "../../src/components/arkaverse/ArkaOrb";
+import { useRuntimeInspector } from "../../src/runtime/useRuntimeInspector";
 
 export default function DashboardPage() {
   const {
@@ -10,6 +11,8 @@ export default function DashboardPage() {
     trigger,
     dashboard,
   } = useIdentityRender();
+  const inspector = useRuntimeInspector();
+
 
   return (
     <div
@@ -33,6 +36,30 @@ export default function DashboardPage() {
         <div className="mb-2">
           Last Event: {dashboard.lastEvent ?? "-"}
         </div>
+
+
+<div className="border border-green-500/30 rounded-xl p-6 min-w-[320px] bg-white/5 backdrop-blur-sm">
+  <div className="text-lg font-bold mb-4">
+    Runtime Inspector
+  </div>
+
+  <div className="mb-2">
+    Runtime State: {inspector.runtimeState}
+  </div>
+
+  <div className="mb-2">
+    Event Count: {inspector.eventCount}
+  </div>
+
+  <div className="mb-2">
+    Last Event: {inspector.lastEvent ?? "-"}
+  </div>
+
+  <div>
+    Memory Keys: {inspector.memoryKeys}
+  </div>
+</div>
+
 
 <div className="mb-2">
   State: {dashboard.state ?? "-"}
