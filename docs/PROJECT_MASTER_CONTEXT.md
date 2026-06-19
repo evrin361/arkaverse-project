@@ -197,43 +197,45 @@ Both routes currently render the Living Dashboard.
 
 # Latest Stable Commit
 
-d7c3bb4
+d5400cd
 
-docs: freeze phase 8.3 completion snapshot
-
----
+docs: freeze phase 8.4 completion snapshot
 
 # Current Phase
 
-Phase 8.3
+Phase 8.4
 
 Complete.
 
 Achievements:
 
-* Living State Visibility
-* Orb Visual Mapping
-* Runtime Inspector v1
-* Runtime State Visibility
-* Event History Visibility
-* Memory Visibility
+* Identity Visibility
+* Identity Inspector
+* Identity State Exposure
+* Identity Dashboard Integration
+* idle visibility
+* active visibility
+* focused visibility
 
-Internal system activity is now visible through the Dashboard.
+Identity Engine state is now visible through the Living Dashboard.
 
 No new engine layers were introduced.
+
+No runtime expansion was introduced.
 
 
 # Next Phase
 
-Phase 8.4
+Phase 8.5
 
 To Be Defined
 
-Before implementation:
+Possible directions:
 
-* Review architecture status
-* Review user-facing value
-* Define next visibility milestone
+* Replay Visibility
+* Memory Visibility Expansion
+* Dashboard UX Evolution
+* Business System Visibility
 
 Priority remains:
 
