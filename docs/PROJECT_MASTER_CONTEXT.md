@@ -113,7 +113,7 @@ Until first complete Living Dashboard exists.
 
 ---
 
-# Current Architecture
+# # Current Architecture
 
 User Event
 ↓
@@ -127,15 +127,25 @@ Identity Render Engine
 ↓
 ArkaOrb
 ↓
-Living Dashboard
+Landing Page / Dashboard
 
 Runtime
 ↓
-Runtime Inspector Engine
-↓
-Dashboard
----
+Runtime Inspector
 
+Identity
+↓
+Identity Inspector
+
+Memory
+↓
+Memory Inspector
+
+Metrics
+↓
+Living Metrics Dashboard
+
+---
 # Implemented Systems
 
 Runtime
@@ -164,14 +174,23 @@ Rendering
 
 * Identity Render Engine
 * useIdentityRender
-* Runtime Inspector Engine
-* useRuntimeInspector
-* Living Dashboard
+
+Inspection
+
+* Runtime Inspector
+* Identity Inspector
+* Memory Inspector
+
+Metrics
+
+* Living Metrics
 
 UI
 
 * ArkaOrb
+* Landing Page
 * Dashboard
+
 
 ---
 
@@ -203,9 +222,27 @@ feat: introduce landing foundation v1
 
 # Current Phase
 
-Phase 8.6
+Phase 8.8
 
 Complete.
+
+Achievements:
+
+* Runtime Visibility
+* Identity Visibility
+* Memory Visibility
+* Landing Foundation
+* Living Orb
+* Living Metrics
+
+ARKAVERSE now exposes internal operational state through visible system metrics.
+
+No additional engine layers were introduced.
+
+Architecture remains aligned with:
+
+Visibility Before Expansion.
+
 
 # Achievements
 
@@ -219,13 +256,23 @@ Complete.
 
 # Next Phase
 
-Phase 8.7
-
-Living Orb Preview
+Phase 9
 
 Goal:
 
-Introduce controlled living behavior to the Homepage Orb while preserving architectural simplicity.
+Transition from internal visibility toward product experience.
+
+Focus:
+
+* Operational Signals
+* Product Presentation
+* Business Operating System Experience
+* Production-ready Homepage Evolution
+
+Priority:
+
+Transform visible system activity into meaningful business-facing value.
+
 
 # Development Rules
 
