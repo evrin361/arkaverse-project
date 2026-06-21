@@ -7,6 +7,7 @@ import { useRuntimeInspector } from "../../src/runtime/useRuntimeInspector";
 import { useIdentityInspector } from "../../src/runtime/useIdentityInspector";
 import { useMemoryInspector } from "../../src/runtime/useMemoryInspector";
 import { useOperationalSignals } from "../../src/runtime/useOperationalSignals";
+import { useBusinessSignals } from "../../src/runtime/useBusinessSignals";
 
 export default function DashboardPage() {
   const {
@@ -18,6 +19,7 @@ export default function DashboardPage() {
   const memory = useMemoryInspector();
   const inspector = useRuntimeInspector();
   const signals = useOperationalSignals();
+const business = useBusinessSignals();
 const health =
   memory.memory.systemStatus === "booted"
     ? "Healthy"
@@ -33,6 +35,25 @@ const health =
   <div className="text-lg font-bold mb-4">
     Operational Signals
   </div>
+
+<div className="border border-pink-500/30 rounded-xl p-6 min-w-[320px] bg-white/5 backdrop-blur-sm">
+  <div className="text-lg font-bold mb-4">
+    Business Signals
+  </div>
+
+  <div className="mb-2">
+    System Readiness: {business.systemReadiness}
+  </div>
+
+  <div className="mb-2">
+    Engagement Level: {business.engagementLevel}
+  </div>
+
+  <div>
+    Operational Stability: {business.operationalStability}
+  </div>
+</div>
+
 
   <div className="mb-2">
     Health: {signals.health}
