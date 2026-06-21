@@ -9,6 +9,7 @@ import { useMemoryInspector } from "../../src/runtime/useMemoryInspector";
 import { useOperationalSignals } from "../../src/runtime/useOperationalSignals";
 import { useBusinessSignals } from "../../src/runtime/useBusinessSignals";
 import { useRecommendation } from "../../src/runtime/useRecommendation";
+import { useRecommendationHistory } from "../../src/runtime/useRecommendationHistory";
 
 export default function DashboardPage() {
   const {
@@ -22,6 +23,8 @@ export default function DashboardPage() {
   const signals = useOperationalSignals();
 const business = useBusinessSignals();
 const recommendation = useRecommendation();
+const recommendationHistory =
+  useRecommendationHistory();
 const health =
   memory.memory.systemStatus === "booted"
     ? "Healthy"
@@ -47,6 +50,31 @@ const health =
   <div className="text-lg font-bold mb-4">
     Recommendation
   </div>
+
+<div className="border border-purple-500/30 rounded-xl p-6 min-w-[320px] bg-white/5 backdrop-blur-sm">
+  <div className="text-lg font-bold mb-4">
+    Recommendation History
+  </div>
+
+  {recommendationHistory
+    .slice(-5)
+    .reverse()
+    .map((item, index) => (
+      <div
+        key={index}
+        className="mb-3 border-b border-white/10 pb-2"
+      >
+        <div>
+          {item.title}
+        </div>
+
+        <div className="text-sm text-gray-400">
+          {item.action}
+        </div>
+      </div>
+    ))}
+</div>
+
 
   <div className="mb-2">
     Title: {recommendation.title}
