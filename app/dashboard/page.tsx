@@ -16,8 +16,44 @@ export default function DashboardPage() {
   const identity = useIdentityInspector();
   const memory = useMemoryInspector();
   const inspector = useRuntimeInspector();
+const health =
+  memory.memory.systemStatus === "booted"
+    ? "Healthy"
+    : "Unknown";
 
 
+<div className="border border-cyan-500/30 rounded-xl p-6 min-w-[320px] bg-white/5 backdrop-blur-sm">
+  <div className="text-lg font-bold mb-4">
+    Living Metrics
+  </div>
+
+  <div className="mb-2">
+    System Health: {health}
+  </div>
+
+  <div className="mb-2">
+    Runtime State: {inspector.runtimeState}
+  </div>
+
+  <div className="mb-2">
+    Identity State: {identity.identityState}
+  </div>
+
+  <div className="mb-2">
+    Events Processed: {inspector.eventCount}
+  </div>
+
+  <div className="mb-2">
+    Memory Records: {inspector.memoryKeys}
+  </div>
+
+  <div>
+    Last Event: {inspector.lastEvent ?? "-"}
+  </div>
+</div>
+
+
+    
   return (
     <div
       onMouseEnter={() => trigger("hover")}
