@@ -113,7 +113,7 @@ Until first complete Living Dashboard exists.
 
 ---
 
-# # Current Architecture
+# Current Architecture
 
 User Event
 ↓
@@ -144,6 +144,11 @@ Memory Inspector
 Metrics
 ↓
 Living Metrics Dashboard
+
+Operational Signals
+↓
+Business Signals
+
 
 ---
 # Implemented Systems
@@ -222,7 +227,7 @@ feat: introduce landing foundation v1
 
 # Current Phase
 
-Phase 8.8
+Phase 9.1
 
 Complete.
 
@@ -234,6 +239,35 @@ Achievements:
 * Landing Foundation
 * Living Orb
 * Living Metrics
+* Operational Signals
+* Business Signals
+
+ARKAVERSE now exposes both operational and business-level interpretations of internal system behavior.
+
+Architecture remains aligned with:
+
+Visibility Before Expansion.
+
+Current Flow:
+
+Runtime
+→ Identity
+→ Memory
+→ Metrics
+→ Operational Signals
+→ Business Signals
+
+
+# Achievements:
+
+* Runtime Visibility
+* Identity Visibility
+* Memory Visibility
+* Landing Foundation
+* Living Orb
+* Living Metrics
+* Operational Signals
+* Business Signals
 
 ARKAVERSE now exposes internal operational state through visible system metrics.
 
