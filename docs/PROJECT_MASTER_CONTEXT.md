@@ -197,49 +197,35 @@ Both routes currently render the Living Dashboard.
 
 # Latest Stable Commit
 
-d5400cd
+a542a90
 
-docs: freeze phase 8.4 completion snapshot
+feat: introduce landing foundation v1
 
 # Current Phase
 
-Phase 8.4
+Phase 8.6
 
 Complete.
 
-Achievements:
+# Achievements
 
+* Landing Foundation v1
+* Public Homepage
+* Dashboard Separation
+* Runtime Visibility
 * Identity Visibility
-* Identity Inspector
-* Identity State Exposure
-* Identity Dashboard Integration
-* idle visibility
-* active visibility
-* focused visibility
-
-Identity Engine state is now visible through the Living Dashboard.
-
-No new engine layers were introduced.
-
-No runtime expansion was introduced.
+* Memory Visibility
 
 
 # Next Phase
 
-Phase 8.5
+Phase 8.7
 
-To Be Defined
+Living Orb Preview
 
-Possible directions:
+Goal:
 
-* Replay Visibility
-* Memory Visibility Expansion
-* Dashboard UX Evolution
-* Business System Visibility
-
-Priority remains:
-
-Visibility before expansion.
+Introduce controlled living behavior to the Homepage Orb while preserving architectural simplicity.
 
 # Development Rules
 
