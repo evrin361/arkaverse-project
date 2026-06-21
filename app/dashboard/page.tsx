@@ -6,6 +6,7 @@ import { ArkaOrb } from "../../src/components/arkaverse/ArkaOrb";
 import { useRuntimeInspector } from "../../src/runtime/useRuntimeInspector";
 import { useIdentityInspector } from "../../src/runtime/useIdentityInspector";
 import { useMemoryInspector } from "../../src/runtime/useMemoryInspector";
+import { useOperationalSignals } from "../../src/runtime/useOperationalSignals";
 
 export default function DashboardPage() {
   const {
@@ -16,6 +17,7 @@ export default function DashboardPage() {
   const identity = useIdentityInspector();
   const memory = useMemoryInspector();
   const inspector = useRuntimeInspector();
+  const signals = useOperationalSignals();
 const health =
   memory.memory.systemStatus === "booted"
     ? "Healthy"
@@ -26,6 +28,25 @@ const health =
   <div className="text-lg font-bold mb-4">
     Living Metrics
   </div>
+
+<div className="border border-purple-500/30 rounded-xl p-6 min-w-[320px] bg-white/5 backdrop-blur-sm">
+  <div className="text-lg font-bold mb-4">
+    Operational Signals
+  </div>
+
+  <div className="mb-2">
+    Health: {signals.health}
+  </div>
+
+  <div className="mb-2">
+    Activity: {signals.activity}
+  </div>
+
+  <div>
+    Attention: {signals.attention}
+  </div>
+</div>
+
 
   <div className="mb-2">
     System Health: {health}
