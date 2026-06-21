@@ -5,6 +5,7 @@ import { useIdentityRender } from "../../src/runtime/useIdentityRender";
 import { ArkaOrb } from "../../src/components/arkaverse/ArkaOrb";
 import { useRuntimeInspector } from "../../src/runtime/useRuntimeInspector";
 import { useIdentityInspector } from "../../src/runtime/useIdentityInspector";
+import { useMemoryInspector } from "../../src/runtime/useMemoryInspector";
 
 export default function DashboardPage() {
   const {
@@ -13,6 +14,7 @@ export default function DashboardPage() {
     dashboard,
   } = useIdentityRender();
   const identity = useIdentityInspector();
+  const memory = useMemoryInspector();
   const inspector = useRuntimeInspector();
 
 
@@ -67,6 +69,33 @@ tabIndex={0}
 
 <div className="mb-2">
   State: {dashboard.state ?? "-"}
+</div>
+
+
+<div className="border border-yellow-500/30 rounded-xl p-6 min-w-[320px] bg-white/5 backdrop-blur-sm">
+  <div className="text-lg font-bold mb-4">
+    Memory Inspector
+  </div>
+
+  <div className="mb-2">
+    System Status: {memory.memory.systemStatus ?? "-"}
+  </div>
+
+  <div className="mb-2">
+    Last Event Type: {memory.memory.lastEventType ?? "-"}
+  </div>
+
+  <div className="mb-2">
+    Last Event Timestamp: {memory.memory.lastEventTimestamp ?? "-"}
+  </div>
+
+  <div className="mb-2">
+    Last Behavior State: {memory.memory.lastBehaviorState ?? "-"}
+  </div>
+
+  <div>
+    Last Behavior Intensity: {memory.memory.lastBehaviorIntensity ?? "-"}
+  </div>
 </div>
 
 
