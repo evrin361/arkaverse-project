@@ -290,7 +290,23 @@ Visibility Before Expansion.
 
 # Next Phase
 
-Phase 9
+# Next Phase
+
+Phase 9.2
+
+Goal:
+
+Transform business signals into actionable recommendations.
+
+Focus:
+
+* Recommendation Engine
+* Decision Support
+* Business Guidance Layer
+
+Priority:
+
+Move from interpretation toward operational guidance.
 
 Goal:
 
