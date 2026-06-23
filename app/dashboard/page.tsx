@@ -1,8 +1,22 @@
 "use client";
 
 import "../../src/runtime/replay/replay-engine";
-import { useIdentityRender } from "../../src/runtime/useIdentityRender";
+
 import { ArkaOrb } from "../../src/components/arkaverse/ArkaOrb";
+
+import { RuntimeCard } from "../../src/components/dashboard/RuntimeCard";
+import { MemoryCard } from "../../src/components/dashboard/MemoryCard";
+import { OperationalSignalsCard } from "../../src/components/dashboard/OperationalSignalsCard";
+import { BusinessSignalsCard } from "../../src/components/dashboard/BusinessSignalsCard";
+import { RecommendationCard } from "../../src/components/dashboard/RecommendationCard";
+import { RecommendationHistoryCard } from "../../src/components/dashboard/RecommendationHistoryCard";
+import { DecisionInsightsCard } from "../../src/components/dashboard/DecisionInsightsCard";
+import { TrendVisibilityCard } from "../../src/components/dashboard/TrendVisibilityCard";
+import { OperationalHealthCard } from "../../src/components/dashboard/OperationalHealthCard";
+import { StatusSummaryCard } from "../../src/components/dashboard/StatusSummaryCard";
+import { ExecutiveDashboardCard } from "../../src/components/dashboard/ExecutiveDashboardCard";
+
+import { useIdentityRender } from "../../src/runtime/useIdentityRender";
 import { useRuntimeInspector } from "../../src/runtime/useRuntimeInspector";
 import { useIdentityInspector } from "../../src/runtime/useIdentityInspector";
 import { useMemoryInspector } from "../../src/runtime/useMemoryInspector";
@@ -11,266 +25,120 @@ import { useBusinessSignals } from "../../src/runtime/useBusinessSignals";
 import { useRecommendation } from "../../src/runtime/useRecommendation";
 import { useRecommendationHistory } from "../../src/runtime/useRecommendationHistory";
 import { useDecisionInsights } from "../../src/runtime/useDecisionInsights";
+import { useTrendVisibility } from "../../src/runtime/useTrendVisibility";
+import { useOperationalHealth } from "../../src/runtime/useOperationalHealth";
+import { useStatusSummary } from "../../src/runtime/useStatusSummary";
+import { useExecutiveDashboard } from "../../src/runtime/useExecutiveDashboard";
 
 export default function DashboardPage() {
-  const {
-    render,
-    trigger,
-    dashboard,
-  } = useIdentityRender();
+  const { render, trigger } = useIdentityRender();
+
+  const inspector = useRuntimeInspector();
   const identity = useIdentityInspector();
   const memory = useMemoryInspector();
-  const inspector = useRuntimeInspector();
+
   const signals = useOperationalSignals();
-const business = useBusinessSignals();
-const recommendation = useRecommendation();
-const recommendationHistory =
-  useRecommendationHistory();
-const decisionInsights =
-  useDecisionInsights();
+  const business = useBusinessSignals();
 
-const health =
-  memory.memory.systemStatus === "booted"
-    ? "Healthy"
-    : "Unknown";
+  const recommendation = useRecommendation();
+  const recommendationHistory = useRecommendationHistory();
 
+  const decisionInsights = useDecisionInsights();
 
-<div className="border border-cyan-500/30 rounded-xl p-6 min-w-[320px] bg-white/5 backdrop-blur-sm">
-  <div className="text-lg font-bold mb-4">
-    Living Metrics
-  </div>
+  const trend = useTrendVisibility();
+  const operationalHealth = useOperationalHealth();
+  const statusSummary = useStatusSummary();
+  const executiveDashboard = useExecutiveDashboard();
 
-<div className="border border-purple-500/30 rounded-xl p-6 min-w-[320px] bg-white/5 backdrop-blur-sm">
-  <div className="text-lg font-bold mb-4">
-    Operational Signals
-  </div>
-
-<div className="border border-pink-500/30 rounded-xl p-6 min-w-[320px] bg-white/5 backdrop-blur-sm">
-  <div className="text-lg font-bold mb-4">
-    Business Signals
-  </div>
-
-<div className="border border-emerald-500/30 rounded-xl p-6 min-w-[320px] bg-white/5 backdrop-blur-sm">
-  <div className="text-lg font-bold mb-4">
-    Recommendation
-  </div>
-
-<div className="border border-purple-500/30 rounded-xl p-6 min-w-[320px] bg-white/5 backdrop-blur-sm">
-  <div className="text-lg font-bold mb-4">
-    Recommendation History
-  </div>
-
-<div className="border border-indigo-500/30 rounded-xl p-6 min-w-[320px] bg-white/5 backdrop-blur-sm">
-  <div className="text-lg font-bold mb-4">
-    Decision Insights
-  </div>
-
-  <div className="mb-2">
-    Most Frequent:
-    {" "}
-    {decisionInsights.mostFrequentRecommendation ?? "-"}
-  </div>
-
-  <div>
-    Count:
-    {" "}
-    {decisionInsights.count}
-  </div>
-</div>
-
-
-  {recommendationHistory
-    .slice(-5)
-    .reverse()
-    .map((item, index) => (
-      <div
-        key={index}
-        className="mb-3 border-b border-white/10 pb-2"
-      >
-        <div>
-          {item.title}
-        </div>
-
-        <div className="text-sm text-gray-400">
-          {item.action}
-        </div>
-      </div>
-    ))}
-</div>
-
-
-  <div className="mb-2">
-    Title: {recommendation.title}
-  </div>
-
-  <div>
-    Action: {recommendation.action}
-  </div>
-</div>
-
-  <div className="mb-2">
-    System Readiness: {business.systemReadiness}
-  </div>
-
-  <div className="mb-2">
-    Engagement Level: {business.engagementLevel}
-  </div>
-
-  <div>
-    Operational Stability: {business.operationalStability}
-  </div>
-</div>
-
-
-  <div className="mb-2">
-    Health: {signals.health}
-  </div>
-
-  <div className="mb-2">
-    Activity: {signals.activity}
-  </div>
-
-  <div>
-    Attention: {signals.attention}
-  </div>
-</div>
-
-
-  <div className="mb-2">
-    System Health: {health}
-  </div>
-
-  <div className="mb-2">
-    Runtime State: {inspector.runtimeState}
-  </div>
-
-  <div className="mb-2">
-    Identity State: {identity.identityState}
-  </div>
-
-  <div className="mb-2">
-    Events Processed: {inspector.eventCount}
-  </div>
-
-  <div className="mb-2">
-    Memory Records: {inspector.memoryKeys}
-  </div>
-
-  <div>
-    Last Event: {inspector.lastEvent ?? "-"}
-  </div>
-</div>
-
-
-    
   return (
     <div
+      tabIndex={0}
       onMouseEnter={() => trigger("hover")}
       onMouseLeave={() => trigger("load")}
       onClick={() => trigger("click")}
       onFocus={() => trigger("focus")}
-tabIndex={0}
-      className="min-h-screen flex flex-col items-center justify-center bg-black text-white gap-10"
+      className="min-h-screen bg-black text-white p-10"
     >
-      <ArkaOrb
-  scale={render?.scale}
-  glow={render?.glow}
-  blur={render?.blur}
-  state={render?.state}
-/>
+      <div className="flex flex-col items-center gap-8 mb-12">
+        <ArkaOrb
+          scale={render?.scale}
+          glow={render?.glow}
+          blur={render?.blur}
+          state={render?.state}
+        />
 
-      <div className="text-3xl font-bold">
-        ARKAVERSE DASHBOARD
-      </div>
-
-      <div className="border border-cyan-500/30 rounded-xl p-6 min-w-[320px] bg-white/5 backdrop-blur-sm">
-        <div className="mb-2">
-          Last Event: {dashboard.lastEvent ?? "-"}
-        </div>
-
-
-<div className="border border-green-500/30 rounded-xl p-6 min-w-[320px] bg-white/5 backdrop-blur-sm">
-  <div className="text-lg font-bold mb-4">
-    Runtime Inspector
-  </div>
-
-  <div className="mb-2">
-    Runtime State: {inspector.runtimeState}
-  </div>
-
-  <div className="mb-2">
-    Event Count: {inspector.eventCount}
-  </div>
-
-  <div className="mb-2">
-    Last Event: {inspector.lastEvent ?? "-"}
-  </div>
-
-  <div>
-    Memory Keys: {inspector.memoryKeys}
-  </div>
-</div>
-
-
-<div className="mb-2">
-  State: {dashboard.state ?? "-"}
-</div>
-
-
-<div className="border border-yellow-500/30 rounded-xl p-6 min-w-[320px] bg-white/5 backdrop-blur-sm">
-  <div className="text-lg font-bold mb-4">
-    Memory Inspector
-  </div>
-
-  <div className="mb-2">
-    System Status: {memory.memory.systemStatus ?? "-"}
-  </div>
-
-  <div className="mb-2">
-    Last Event Type: {memory.memory.lastEventType ?? "-"}
-  </div>
-
-  <div className="mb-2">
-    Last Event Timestamp: {memory.memory.lastEventTimestamp ?? "-"}
-  </div>
-
-  <div className="mb-2">
-    Last Behavior State: {memory.memory.lastBehaviorState ?? "-"}
-  </div>
-
-  <div>
-    Last Behavior Intensity: {memory.memory.lastBehaviorIntensity ?? "-"}
-  </div>
-</div>
-
-
-
-<div className="mb-2">
-  Identity State: {identity.identityState}
-</div>
-
-        <div className="mb-2">
-          Intensity: {render?.intensity ?? "-"}
-        </div>
-
-        <div className="mb-2">
-          Scale: {render?.scale ?? "-"}
-        </div>
-
-        <div className="mb-2">
-          Glow: {render?.glow ?? "-"}
-        </div>
-
-        <div className="mb-2">
-          Blur: {render?.blur ?? "-"}
+        <div className="text-3xl font-bold">
+          ARKAVERSE DASHBOARD
         </div>
 
         <div>
-          Duration: {render?.duration ?? "-"}
+          Identity State: {identity.identityState}
         </div>
+      </div>
 
+      <div className="flex flex-wrap gap-6">
+        <RuntimeCard
+          runtimeState={inspector.runtimeState}
+          eventCount={inspector.eventCount}
+          lastEvent={inspector.lastEvent}
+          memoryKeys={inspector.memoryKeys}
+        />
 
-        
+        <MemoryCard
+          systemStatus={memory.memory.systemStatus}
+          lastEventType={memory.memory.lastEventType}
+          lastEventTimestamp={memory.memory.lastEventTimestamp}
+          lastBehaviorState={memory.memory.lastBehaviorState}
+          lastBehaviorIntensity={memory.memory.lastBehaviorIntensity}
+        />
+
+        <OperationalSignalsCard
+          health={signals.health}
+          activity={signals.activity}
+          attention={signals.attention}
+        />
+
+        <BusinessSignalsCard
+          systemReadiness={business.systemReadiness}
+          engagementLevel={business.engagementLevel}
+          operationalStability={business.operationalStability}
+        />
+
+        <RecommendationCard
+          title={recommendation.title}
+          action={recommendation.action}
+        />
+
+        <RecommendationHistoryCard
+          items={recommendationHistory
+            .slice(-5)
+            .reverse()}
+        />
+
+        <DecisionInsightsCard
+          mostFrequentRecommendation={
+            decisionInsights.mostFrequentRecommendation
+          }
+          count={decisionInsights.count}
+        />
+
+        <TrendVisibilityCard
+          direction={trend.direction}
+        />
+
+        <OperationalHealthCard
+          status={operationalHealth.status}
+        />
+
+        <StatusSummaryCard
+          summary={statusSummary.summary}
+        />
+
+        <ExecutiveDashboardCard
+          health={executiveDashboard.health}
+          trend={executiveDashboard.trend}
+          summary={executiveDashboard.summary}
+        />
       </div>
     </div>
   );

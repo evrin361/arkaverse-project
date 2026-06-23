@@ -1,23 +1,8 @@
-import { operationalHealthEngine } from "./operational-health.engine";
-import { trendVisibilityEngine } from "./trend-visibility.engine";
-import { statusSummaryEngine } from "./status-summary.engine";
-import { ExecutiveDashboardOutput } from "./executive-dashboard.types";
+"use client";
 
-export const executiveDashboardEngine = {
-  build(): ExecutiveDashboardOutput {
-    const health =
-      operationalHealthEngine.inspect();
+import { executiveDashboardEngine }
+from "./executive-dashboard.engine";
 
-    const trend =
-      trendVisibilityEngine.analyze();
-
-    const summary =
-      statusSummaryEngine.summarize();
-
-    return {
-      health: health.status,
-      trend: trend.direction,
-      summary: summary.summary,
-    };
-  },
-};
+export function useExecutiveDashboard() {
+  return executiveDashboardEngine.build();
+}
