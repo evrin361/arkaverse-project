@@ -3,12 +3,17 @@
 import Link from "next/link";
 import { ArkaOrb } from "../src/components/arkaverse/ArkaOrb";
 import { useIdentityRender } from "../src/runtime/useIdentityRender";
+import { CustomerNavbar } from "../src/components/customer/CustomerNavbar";
 
 export default function HomePage() {
   const { render, trigger } = useIdentityRender();
 
   return (
     <main className="min-h-screen bg-black text-white">
+
+  <CustomerNavbar />
+
+
 
       <section className="px-6 pt-24 pb-20 flex flex-col items-center text-center">
         <div className="max-w-5xl w-full flex flex-col items-center gap-10">
@@ -46,7 +51,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-6 py-20">
+     <section
+  id="services"
+  className="px-6 py-20"
+>
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
 
           <div className="border border-cyan-500/20 rounded-2xl p-8 bg-white/5">
@@ -85,7 +93,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-6 py-24">
+      <section
+  id="about"
+  className="px-6 py-24"
+>
         <div className="max-w-4xl mx-auto text-center">
 
           <h2 className="text-4xl font-bold mb-8">
@@ -108,8 +119,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="px-6 py-24">
-        <div className="max-w-5xl mx-auto">
+<section
+  id="method"
+  className="px-6 py-24"
+>        <div className="max-w-5xl mx-auto">
 
          <h2 className="text-4xl font-bold text-center mb-16">
   رویکرد آرکاورس
