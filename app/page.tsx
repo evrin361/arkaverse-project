@@ -45,54 +45,77 @@ export default function HomePage() {
       </div>
 
       {/* Content */}
-      <div className="text-center space-y-8">
+      <div className="space-y-6 text-right">
 
-        <div className="space-y-6">
+        <div className="space-y-5">
 
-          <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight">
-            ARKAVERSE
-          </h1>
+          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-right">
+  آرکاورس
+</h1>
+<div className="space-y-5">
 
-          <div className="space-y-4 text-cyan-300">
+  <div className="flex flex-row-reverse items-center justify-start gap-3">
+    <span className="w-2 h-2 rounded-full bg-cyan-400 shrink-0" />
+    <p className="text-cyan-300 font-medium text-right">
+      معماری سیستم‌های کسب‌وکار
+    </p>
+  </div>
 
-            <p>معماری سیستم‌های کسب‌وکار</p>
+  <div className="flex flex-row-reverse items-center justify-start gap-3">
+    <span className="w-2 h-2 rounded-full bg-cyan-400 shrink-0" />
+    <p className="text-cyan-300 font-medium text-right">
+      تحول دیجیتال
+    </p>
+  </div>
 
-            <div className="w-16 h-px bg-cyan-500/40 mx-auto" />
+  <div className="flex flex-row-reverse items-center justify-start gap-3">
+    <span className="w-2 h-2 rounded-full bg-cyan-400 shrink-0" />
+    <p className="text-cyan-300 font-medium text-right">
+      طراحی هوشمند سازمان
+    </p>
+  </div>
 
-            <p>تحول دیجیتال</p>
+</div>
 
-            <div className="w-16 h-px bg-cyan-500/40 mx-auto" />
+<div className="flex justify-end mt-6">
 
-            <p>طراحی هوشمند سازمان</p>
+  <div className="w-fit">
 
-          </div>
+    <div className="flex flex-row-reverse items-start gap-3">
 
-          <p className="max-w-2xl text-gray-400 text-xl leading-loose mx-auto">
-            نظام‌مندی، هوشمندسازی و راهبری سیستم‌های اداری و تجاری
-          </p>
+      <span className="text-cyan-400 text-lg mt-1 shrink-0">
+        ✦
+      </span>
 
-        </div>
+      <p className="text-gray-300 text-lg leading-loose text-right">
+  نظام‌مندی، هوشمندسازی و راهبری سیستم‌های اداری و تجاری
+</p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    </div>
 
-          <Link
-            href="/dashboard"
-            className="px-8 py-4 rounded-xl bg-cyan-500 text-black font-bold hover:scale-105 transition shadow-[0_0_30px_rgba(34,211,238,0.35)]"
-          >
-            آشنایی با آرکاورس
-          </Link>
+    <div className="flex justify-center gap-4 mt-8">
 
-          <a
-            href="#services"
-            className="px-8 py-4 rounded-xl border border-white/10 hover:border-cyan-400 hover:bg-white/5 transition"
-          >
-            مشاهده خدمات
-          </a>
+      <Link
+        href="/dashboard"
+        className="px-8 py-4 rounded-xl bg-cyan-500 text-black font-bold hover:scale-105 transition shadow-[0_0_30px_rgba(34,211,238,0.35)]"
+      >
+        آشنایی با آرکاورس
+      </Link>
 
-        </div>
+      <a
+        href="#services"
+        className="px-8 py-4 rounded-xl border border-white/10 hover:border-cyan-400 hover:bg-white/5 transition"
+      >
+        مشاهده خدمات
+      </a>
 
-      </div>
+    </div>
 
+  </div>
+
+</div>
+</div>
+</div>
     </div>
 
   </div>
