@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArkaOrb } from "../src/components/arkaverse/ArkaOrb";
 import { useIdentityRender } from "../src/runtime/useIdentityRender";
 import { CustomerNavbar } from "../src/components/customer/CustomerNavbar";
+import { CustomerValueSection } from "../src/components/customer/CustomerValueSection";
 
 export default function HomePage() {
   const { render, trigger } = useIdentityRender();
@@ -14,43 +15,90 @@ export default function HomePage() {
   <CustomerNavbar />
 
 
+<section className="px-6 pt-20 pb-10 ">
+  
+  <div className="max-w-7xl mx-auto">
 
-      <section className="px-6 pt-24 pb-20 flex flex-col items-center text-center">
-        <div className="max-w-5xl w-full flex flex-col items-center gap-10">
+    <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:[direction:ltr]">
 
-          <div className="space-y-6">
-            <h1 className="text-6xl md:text-7xl font-bold tracking-tight">
-              ARKAVERSE
-            </h1>
+      {/* Orb */}
+      <div className="relative flex justify-center">
 
-            <div className="text-cyan-300 text-lg md:text-xl font-medium space-y-1">
-  <p>معماری سیستم‌های کسب‌وکار</p>
-  <p>تحول دیجیتال</p>
-  <p>طراحی هوشمند سازمان</p>
-</div>
+        <div className="absolute w-[650px] h-[650px] rounded-full bg-cyan-500/5 blur-3xl" />
 
-<p className="max-w-3xl text-gray-300 text-lg leading-relaxed mx-auto">
-  نظام‌مندی، هوشمندسازی و راهبری سیستم‌های اداری و تجاری
-</p>
-          </div>
-
-          <div
-            onMouseEnter={() => trigger("hover")}
-            onMouseLeave={() => trigger("load")}
-            onClick={() => trigger("click")}
-            onFocus={() => trigger("focus")}
-            tabIndex={0}
-          >
-            <ArkaOrb
-              scale={render?.scale ?? 1}
-              glow={render?.glow ?? "soft"}
-              blur={render?.blur ?? "0px"}
-              state={render?.state ?? "idle"}
-            />
-          </div>
+        <div
+          className="relative scale-125 lg:scale-150"
+          onMouseEnter={() => trigger("hover")}
+          onMouseLeave={() => trigger("load")}
+          onClick={() => trigger("click")}
+          onFocus={() => trigger("focus")}
+          tabIndex={0}
+        >
+          <ArkaOrb
+            scale={render?.scale ?? 1}
+            glow={render?.glow ?? "soft"}
+            blur={render?.blur ?? "0px"}
+            state={render?.state ?? "idle"}
+          />
         </div>
-      </section>
 
+      </div>
+
+      {/* Content */}
+      <div className="text-center space-y-8">
+
+        <div className="space-y-6">
+
+          <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight">
+            ARKAVERSE
+          </h1>
+
+          <div className="space-y-4 text-cyan-300">
+
+            <p>معماری سیستم‌های کسب‌وکار</p>
+
+            <div className="w-16 h-px bg-cyan-500/40 mx-auto" />
+
+            <p>تحول دیجیتال</p>
+
+            <div className="w-16 h-px bg-cyan-500/40 mx-auto" />
+
+            <p>طراحی هوشمند سازمان</p>
+
+          </div>
+
+          <p className="max-w-2xl text-gray-400 text-xl leading-loose mx-auto">
+            نظام‌مندی، هوشمندسازی و راهبری سیستم‌های اداری و تجاری
+          </p>
+
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+          <Link
+            href="/dashboard"
+            className="px-8 py-4 rounded-xl bg-cyan-500 text-black font-bold hover:scale-105 transition shadow-[0_0_30px_rgba(34,211,238,0.35)]"
+          >
+            آشنایی با آرکاورس
+          </Link>
+
+          <a
+            href="#services"
+            className="px-8 py-4 rounded-xl border border-white/10 hover:border-cyan-400 hover:bg-white/5 transition"
+          >
+            مشاهده خدمات
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<CustomerValueSection />
      <section
   id="services"
   className="px-6 py-20"
@@ -58,38 +106,42 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
 
           <div className="border border-cyan-500/20 rounded-2xl p-8 bg-white/5">
-            <h3 className="text-2xl font-semibold mb-4">
+            <h3 className="text-2xl font-semibold mb-4 text-center">
   معماری سیستم‌های کسب‌وکار
 </h3>
 
-<p className="text-gray-400 leading-relaxed">
+<div className="w-[220px] mx-auto">
+  <p className="text-gray-400 leading-relaxed text-right">
   طراحی ساختارها، فرآیندها، نقش‌ها و چارچوب‌های مدیریتی
   برای ایجاد انسجام، شفافیت و اجرای مؤثر.
 </p>
           </div>
+          </div>
 
           <div className="border border-cyan-500/20 rounded-2xl p-8 bg-white/5">
-            <h3 className="text-2xl font-semibold mb-4">
+            <h3 className="text-2xl font-semibold mb-4 text-center">
   تحول دیجیتال
 </h3>
+<div className="max-w-xs mx-auto ">
 
-<p className="text-gray-400 leading-relaxed">
+<p className="text-gray-400 leading-relaxed text-right">
   تبدیل عملیات سنتی به سیستم‌های دیجیتال یکپارچه،
   قابل اندازه‌گیری و مبتنی بر داده.
 </p>
           </div>
-
+</div>
           <div className="border border-cyan-500/20 rounded-2xl p-8 bg-white/5">
-            <h3 className="text-2xl font-semibold mb-4">
+            <h3 className="text-2xl font-semibold mb-4 text-center">
   طراحی هوشمند سازمان
 </h3>
 
-<p className="text-gray-400 leading-relaxed">
+<div className="w-[220px] mx-auto">
+  <p className="text-gray-400 leading-relaxed text-right">
   ایجاد سازمان‌های یادگیرنده، چابک و مقیاس‌پذیر
   با تکیه بر هوشمندی عملیاتی و تصمیم‌گیری آگاهانه.
 </p>
           </div>
-
+</div>
         </div>
       </section>
 
@@ -131,50 +183,53 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8">
 
             <div className="border border-white/10 rounded-2xl p-8">
-              <div className="text-cyan-400 text-sm mb-3">
+              <div className="text-cyan-400 text-sm mb-3 text-center">
                 01
               </div>
 
-              <h3 className="text-2xl font-semibold mb-4">
+              <h3 className="text-2xl font-semibold mb-4 text-center">
   شناخت و تحلیل
 </h3>
 
-<p className="text-gray-400">
+<div className="w-[220px] mx-auto">
+  <p className="text-gray-400 leading-relaxed text-right">
   بررسی وضعیت موجود، ساختارها،
   فرآیندها و چالش‌های سازمان.
 </p>
             </div>
-
+</div>
             <div className="border border-white/10 rounded-2xl p-8">
-              <div className="text-cyan-400 text-sm mb-3">
+              <div className="text-cyan-400 text-sm mb-3 text-center">
                 02
               </div>
 
-              <h3 className="text-2xl font-semibold mb-4">
-  طراحی و نظام‌مندسازی
-</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-center">
+                 طراحی و نظام‌مندسازی
+              </h3>
 
-<p className="text-gray-400">
-  ایجاد معماری عملیاتی،
-  فرآیندها و چارچوب‌های مدیریتی.
-</p>
-            </div>
-
+              <div className="w-[220px] mx-auto">
+                <p className="text-gray-400 leading-relaxed text-right">
+                ایجاد معماری عملیاتی،
+                فرآیندها و چارچوب‌های مدیریتی.
+                </p>
+              </div>
+              </div>
             <div className="border border-white/10 rounded-2xl p-8">
-              <div className="text-cyan-400 text-sm mb-3">
+              <div className="text-cyan-400 text-sm mb-3 text-center">
                 03
               </div>
 
-              <h3 className="text-2xl font-semibold mb-4">
-  استقرار و توسعه
+              <h3 className="text-2xl font-semibold mb-4 text-center">
+                 استقرار و توسعه
 </h3>
 
-<p className="text-gray-400">
+<div className="w-[220px] mx-auto">
+  <p className="text-gray-400 leading-relaxed text-right">
   پیاده‌سازی راهکارها،
   هوشمندسازی و بهبود مستمر.
 </p>
             </div>
-
+</div>
           </div>
         </div>
       </section>
