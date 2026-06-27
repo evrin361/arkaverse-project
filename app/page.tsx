@@ -1,16 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { ArkaOrb } from "../src/components/arkaverse/ArkaOrb";
-import { useIdentityRender } from "../src/runtime/useIdentityRender";
 import { CustomerNavbar } from "../src/components/customer/CustomerNavbar";
 import { CustomerValueSection } from "../src/components/customer/CustomerValueSection";
 import { LivingCore } from "../src/components/living-core/LivingCore";
-import { useRuntimeReactor } from "../src/runtime/useRuntimeReactor";
 
 export default function HomePage() {
-  const { render, trigger } = useIdentityRender();
-const reactorState = useRuntimeReactor();
 
   return (
     <main className="min-h-screen bg-black text-white">
@@ -55,7 +50,7 @@ const reactorState = useRuntimeReactor();
 */}
 
 <div className="mt-12 flex justify-center">
-<LivingCore state={reactorState} />
+<LivingCore />
 </div>
 
 

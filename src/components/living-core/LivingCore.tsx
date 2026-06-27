@@ -4,16 +4,12 @@ import { IdentityShell } from "./IdentityShell";
 import { SignalNetwork } from "./SignalNetwork";
 import { ReactorState } from "./types";
 import { getReactorBehavior } from "../../runtime/reactorBehavior";
+import { useRuntimeReactor } from "../../runtime/useRuntimeReactor";
+type LivingCoreProps = {};
 
-type LivingCoreProps = {
-  state?: ReactorState;
-};
+export function LivingCore({}: LivingCoreProps) {
 
-export function LivingCore({
-  state = "idle",
-  
-}: LivingCoreProps) {
-
+  const state = useRuntimeReactor();
     const behavior = getReactorBehavior(state);
   return (
 <div

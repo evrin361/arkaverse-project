@@ -265,3 +265,12 @@ Runtime should become progressively more autonomous.
 The long-term objective is to evolve ARKAVERSE into a fully autonomous intelligent operating platform while preserving clean architectural boundaries.
 
 This constitution serves as the permanent architectural reference for the project.
+
+
+## Executive Memory Principle
+
+Executive decisions may use runtime memory.
+
+Runtime memory must remain independent from UI components.
+
+Memory is part of Runtime Architecture, not Presentation.

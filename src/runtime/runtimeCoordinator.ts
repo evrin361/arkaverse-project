@@ -1,0 +1,33 @@
+import { emitEvent } from "./eventBus";
+import { updateRuntimeContext } from "./runtimeStore";
+import type { ReactorEvent } from "./events";
+
+export function dispatchRuntimeEvent(event: ReactorEvent) {
+  switch (event) {
+    case "USER_ENTERED":
+      updateRuntimeContext({
+        activeUsers: 1,
+      });
+      break;
+
+    case "USER_LEFT":
+      updateRuntimeContext({
+        activeUsers: 0,
+      });
+      break;
+
+    case "AI_STARTED":
+      updateRuntimeContext({
+        aiBusy: true,
+      });
+      break;
+
+    case "AI_FINISHED":
+      updateRuntimeContext({
+        aiBusy: false,
+      });
+      break;
+  }
+
+  emitEvent(event);
+}
