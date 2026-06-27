@@ -19,13 +19,23 @@ import {
 } from "./executiveIntent";
 
 
+import { getEventPriority } from "./executivePriority";
+
 export function evaluateEvent(
   event: ReactorEvent
 ): ReactorState {
 
   const runtime = getRuntimeContext();
+  const priority = getEventPriority(event);
   const previousState = getLastState();
 
+
+  console.log(
+  "[Executive]",
+  event,
+  "Priority:",
+  priority
+);
   /*
    * اگر سیستم سالم نباشد
    * همیشه وارد حالت Thinking می‌شویم.

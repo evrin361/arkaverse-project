@@ -249,7 +249,7 @@ Latest Runtime Evolution
 - Executive Memory
 - Executive Continuity
 - Executive Intent
-
+- Executive Priority Awareness
 Core
 
 * Arka Orchestrator

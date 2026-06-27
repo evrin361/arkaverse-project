@@ -282,3 +282,11 @@ Executive State describes what the runtime currently is.
 Executive Intent describes what the runtime is trying to accomplish.
 
 Intent and State are related but must remain conceptually independent.
+
+## Executive Priority Principle
+
+Every Runtime Event carries an importance level.
+
+Priority must be evaluated before Executive decisions are produced.
+
+Future Runtime behavior must resolve conflicts using priority rather than event arrival order.
