@@ -3,6 +3,8 @@ import type { ReactorEvent } from "./events";
 
 import { evaluatePolicy } from "./executivePolicy";
 import { getRuntimeContext } from "./runtimeStore";
+import { makeExecutiveDecision } from "./executiveDecision";
+
 import {
   isSystemBusy,
   isSystemHealthy,
@@ -100,6 +102,6 @@ switch (nextState) {
 }
 rememberState(nextState);
 
-return nextState;
+return makeExecutiveDecision(nextState);
 
 }

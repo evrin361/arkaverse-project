@@ -250,6 +250,8 @@ Latest Runtime Evolution
 - Executive Continuity
 - Executive Intent
 - Executive Priority Awareness
+- Executive Decision Layer
+
 Core
 
 * Arka Orchestrator

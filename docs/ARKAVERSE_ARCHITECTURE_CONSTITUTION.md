@@ -290,3 +290,11 @@ Every Runtime Event carries an importance level.
 Priority must be evaluated before Executive decisions are produced.
 
 Future Runtime behavior must resolve conflicts using priority rather than event arrival order.
+
+## Executive Decision Principle
+
+Policy determines the recommended Runtime State.
+
+Decision determines the final Runtime State.
+
+Future Executive evolution must occur inside the Decision Layer without modifying Runtime Policies.
