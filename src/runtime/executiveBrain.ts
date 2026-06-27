@@ -18,6 +18,7 @@ export function evaluateEvent(
 ): ReactorState {
 
   const runtime = getRuntimeContext();
+  const previousState = getLastState();
 
   /*
    * اگر سیستم سالم نباشد
@@ -39,6 +40,23 @@ export function evaluateEvent(
   /*
    * در غیر این صورت
    */
+
+/*
+ * Continuity Rule
+ *
+ * اگر قبلاً در حالت Processing بودیم
+ * و سیستم هنوز Busy است،
+ * همان حالت را حفظ می‌کنیم.
+ */
+
+if (
+  previousState === "processing" &&
+  isSystemBusy()
+) {
+  rememberState("processing");
+  return "processing";
+}
+
 
   const nextState = evaluatePolicy(
   event,

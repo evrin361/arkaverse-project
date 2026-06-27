@@ -243,6 +243,12 @@ Current Runtime Modules
 - Executive Memory
 - Reactor Driver
 
+Latest Runtime Evolution
+
+- Runtime Awareness
+- Executive Memory
+- Executive Continuity
+
 Core
 
 * Arka Orchestrator
@@ -435,3 +441,11 @@ Allow potential customers to understand ARKAVERSE services, describe their needs
 The project is intended to become a professional public-facing business platform and portfolio.
 
 Every phase should contribute toward a production-ready ARKAVERSE experience.
+
+
+🏛️ ARKAVERSE_ARCHITECTURE_CONSTITUTION
+## Executive Continuity Principle
+
+Executive decisions should preserve behavioral continuity whenever the runtime context has not fundamentally changed.
+
+Behavior should transition intentionally, not oscillate between transient events.
