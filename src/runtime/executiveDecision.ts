@@ -14,6 +14,10 @@ import {
 } from "./executiveConfidence";
 
 
+import {
+  setExecutiveStability,
+} from "./executiveStability";
+
 export function makeExecutiveDecision(
   state: ReactorState
 ): ReactorState {
@@ -55,6 +59,17 @@ if (memory === state) {
   setExecutiveConfidence(0.75);
 
 }
+
+if (memory === state) {
+
+  setExecutiveStability(1);
+
+} else {
+
+  setExecutiveStability(0.6);
+
+}
+
 return resolveConflict(
   state,
   memory

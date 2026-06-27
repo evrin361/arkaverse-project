@@ -27,6 +27,10 @@ import {
   getExecutiveConfidence,
 } from "./executiveConfidence";
 
+import {
+  getExecutiveStability,
+} from "./executiveStability";
+
 export function evaluateEvent(
   event: ReactorEvent
 ): ReactorState {
@@ -109,6 +113,11 @@ rememberState(nextState);
 console.log(
   "[Confidence]",
   getExecutiveConfidence()
+);
+
+console.log(
+  "[Stability]",
+  getExecutiveStability()
 );
 
 return makeExecutiveDecision(nextState);
