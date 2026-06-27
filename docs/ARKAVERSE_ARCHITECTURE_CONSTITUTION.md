@@ -350,3 +350,11 @@ Reasoning prepares the Runtime for future learning, prediction and autonomous pl
 Executive reasoning should estimate the likely outcome of a decision before execution.
 
 Prediction is advisory and prepares the Runtime for future learning, planning and autonomous behavior.
+
+## Executive Learning Principle
+
+The Executive Runtime should preserve operational experience.
+
+Learning records previous predictions and decisions to enable future adaptation, optimization and autonomous reasoning.
+
+Learning must remain independent from presentation and operate entirely inside the Runtime layer.

@@ -30,6 +30,11 @@ import {
   buildExecutiveContext,
 } from "./executiveContext";
 
+import {
+  learnExecutiveDecision,
+  getExecutiveLearning,
+} from "./executiveLearning";
+
 export function makeExecutiveDecision(
   state: ReactorState
 ): ReactorState {
@@ -40,6 +45,12 @@ const memory = getLastState();
 
 const context = buildExecutiveContext(state);
 
+const prediction =
+  predictExecutiveOutcome(state);
+
+
+
+
 console.log(
   "[Context]",
   context
@@ -47,9 +58,12 @@ console.log(
 
 
 console.log(
-    "[Prediction]",
-    predictExecutiveOutcome(state)
+  "[Prediction]",
+  prediction
 );
+
+
+
 
   console.log(
     "[Decision]",
@@ -74,6 +88,16 @@ if (
   return memory;
 
 }
+
+learnExecutiveDecision(
+  state,
+  prediction
+);
+
+console.log(
+  "[Learning]",
+  getExecutiveLearning()
+);
 
 
 if (memory === state) {
@@ -111,10 +135,16 @@ console.log(
   getExecutiveConsistency()
 );
 
+const reasoning =
+  buildExecutiveReasoning(state);
+
 console.log(
   "[Reasoning]",
-  buildExecutiveReasoning(state)
+  reasoning
 );
+
+
+
 
 return resolveConflict(
   state,
