@@ -251,6 +251,7 @@ Latest Runtime Evolution
 - Executive Intent
 - Executive Priority Awareness
 - Executive Decision Layer
+- Adaptive Decision Engine
 
 Core
 

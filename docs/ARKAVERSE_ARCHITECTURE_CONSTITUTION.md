@@ -298,3 +298,9 @@ Policy determines the recommended Runtime State.
 Decision determines the final Runtime State.
 
 Future Executive evolution must occur inside the Decision Layer without modifying Runtime Policies.
+
+## Runtime Stability Principle
+
+Repeated Runtime States should not trigger unnecessary transitions.
+
+Executive Decisions must preserve stability whenever no meaningful change is required.

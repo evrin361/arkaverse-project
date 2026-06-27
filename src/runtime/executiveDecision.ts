@@ -24,5 +24,14 @@ const memory = getLastState();
     }
   );
 
-  return state;
+if (memory === state) {
+
+  console.log(
+    "[Decision] Stable State"
+  );
+
+  return memory;
+
 }
+
+return state;}
