@@ -24,3 +24,189 @@ html, body {
  *, *::before, *::after {
   cursor: auto;
 }
+@keyframes energySlow {
+  0%,100%{
+    transform:scale(1);
+    opacity:.55;
+  }
+
+  50%{
+    transform:scale(1.06);
+    opacity:.8;
+  }
+}
+
+@keyframes energyMedium {
+  0%,100%{
+    transform:scale(1);
+    opacity:.45;
+  }
+
+  50%{
+    transform:scale(1.04);
+    opacity:.65;
+  }
+}
+
+@keyframes energyFast {
+  0%,100%{
+    transform:scale(.98);
+    opacity:.55;
+  }
+
+  50%{
+    transform:scale(1.03);
+    opacity:.9;
+  }
+}
+
+.animate-energy-slow{
+  animation:energySlow 12s ease-in-out infinite;
+}
+
+.animate-energy-medium{
+  animation:energyMedium 8s ease-in-out infinite;
+}
+
+.animate-energy-fast{
+  animation:energyFast 5s ease-in-out infinite;
+}
+.orbit{
+  position:absolute;
+  inset:0;
+  margin:auto;
+  border-radius:9999px;
+  border:1px solid rgba(34,211,238,.10);
+}
+
+.orbit-1{
+  width:430px;
+  height:420px;
+  border-color:rgba(34,211,238,.05);
+  animation:orbitClockwise 90s linear infinite;
+}
+
+.orbit-2{
+  width:340px;
+  height:330px;
+  border-color:rgba(34,211,238,.04);
+  animation:orbitCounter 140s linear infinite;
+}
+.orbit-3{
+  width:230px;
+  height:230px;
+  border-color:rgba(34,211,238,.03);
+}
+
+@keyframes orbitClockwise{
+
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+
+}
+
+@keyframes orbitCounter{
+
+  from{
+    transform:rotate(360deg);
+  }
+
+  to{
+    transform:rotate(0deg);
+  }
+
+}
+@keyframes coreBreath{
+
+  0%,100%{
+    transform:scale(1);
+    opacity:.92;
+  }
+
+  50%{
+    transform:scale(1.03);
+    opacity:1;
+  }
+
+}
+
+.animate-core-pulse{
+  animation:coreBreath 8s ease-in-out infinite;
+}
+@keyframes coreGlow{
+
+  0%,100%{
+    transform:scale(1);
+    opacity:.08;
+  }
+
+  50%{
+    transform:scale(1.12);
+    opacity:.16;
+  }
+
+}
+
+.animate-core-glow{
+  animation:coreGlow 8s ease-in-out infinite;
+}
+.signal-dot{
+
+  position:absolute;
+
+  width:6px;
+  height:6px;
+
+  border-radius:9999px;
+
+  background:#67e8f9;
+
+  box-shadow:
+      0 0 8px rgba(103,232,249,.9),
+      0 0 18px rgba(103,232,249,.4);
+
+  top:-3px;
+  left:50%;
+
+  transform:translateX(-50%);
+}
+.signal{
+
+  position:absolute;
+
+  width:6px;
+  height:6px;
+
+  border-radius:9999px;
+
+  background:#67e8f9;
+
+  box-shadow:
+      0 0 8px rgba(103,232,249,.8),
+      0 0 18px rgba(103,232,249,.35);
+
+  transform:translate(-50%,-50%);
+}
+
+.signal-1{
+
+  top:0%;
+  left:50%;
+}
+
+.signal-2{
+
+  top:50%;
+  left:100%;
+}
+
+.signal-3{
+
+  top:100%;
+  left:50%;
+}

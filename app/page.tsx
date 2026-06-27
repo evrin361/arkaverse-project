@@ -5,9 +5,12 @@ import { ArkaOrb } from "../src/components/arkaverse/ArkaOrb";
 import { useIdentityRender } from "../src/runtime/useIdentityRender";
 import { CustomerNavbar } from "../src/components/customer/CustomerNavbar";
 import { CustomerValueSection } from "../src/components/customer/CustomerValueSection";
+import { LivingCore } from "../src/components/living-core/LivingCore";
+import { useRuntimeReactor } from "../src/runtime/useRuntimeReactor";
 
 export default function HomePage() {
   const { render, trigger } = useIdentityRender();
+const reactorState = useRuntimeReactor();
 
   return (
     <main className="min-h-screen bg-black text-white">
@@ -21,7 +24,9 @@ export default function HomePage() {
 
     <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center lg:[direction:ltr]">
 
-      {/* Orb */}
+{/*    
+
+      {/* Orb 
       <div className="relative flex justify-center">
 
         <div className="absolute w-[650px] h-[650px] rounded-full bg-cyan-500/5 blur-3xl" />
@@ -42,7 +47,17 @@ export default function HomePage() {
           />
         </div>
 
-      </div>
+
+
+
+      </div> 
+
+*/}
+
+<div className="mt-12 flex justify-center">
+<LivingCore state={reactorState} />
+</div>
+
 
       {/* Content */}
       <div className="space-y-6 text-right">
