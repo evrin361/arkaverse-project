@@ -308,3 +308,7 @@ Executive Decisions must preserve stability whenever no meaningful change is req
 ## Executive Conflict Principle
 
 When multiple Runtime states compete, the Executive must preserve the state with the highest operational importance unless a stronger transition is explicitly required.
+
+## Executive Gate Principle
+
+The Executive must not perform a new decision when the proposed Runtime state is identical to the current validated state.

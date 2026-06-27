@@ -1,5 +1,6 @@
 import type { ReactorState } from "../components/living-core/types";
 import { resolveConflict } from "./executiveConflict";
+import { shouldExecuteDecision } from "./executiveGate";
 import {
   getExecutiveIntent,
 } from "./executiveIntent";
@@ -24,7 +25,12 @@ const memory = getLastState();
     }
   );
 
-if (memory === state) {
+if (
+  !shouldExecuteDecision(
+    memory,
+    state
+  )
+) {
 
   console.log(
     "[Decision] Stable State"

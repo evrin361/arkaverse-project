@@ -253,6 +253,7 @@ Latest Runtime Evolution
 - Executive Decision Layer
 - Adaptive Decision Engine
 - Executive Conflict Resolution
+- Executive Decision Gate
 
 Core
 
