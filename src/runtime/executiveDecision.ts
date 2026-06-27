@@ -18,6 +18,12 @@ import {
   setExecutiveStability,
 } from "./executiveStability";
 
+import {
+  setExecutiveConsistency,
+  getExecutiveConsistency,
+} from "./executiveConsistency";
+
+
 export function makeExecutiveDecision(
   state: ReactorState
 ): ReactorState {
@@ -69,6 +75,21 @@ if (memory === state) {
   setExecutiveStability(0.6);
 
 }
+
+if (memory === state) {
+
+  setExecutiveConsistency(1);
+
+} else {
+
+  setExecutiveConsistency(0.7);
+
+}
+
+console.log(
+  "[Consistency]",
+  getExecutiveConsistency()
+);
 
 return resolveConflict(
   state,

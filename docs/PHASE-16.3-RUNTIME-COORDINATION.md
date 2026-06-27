@@ -106,6 +106,7 @@ Runtime Coordinator ONLY synchronizes Runtime systems.
 
 It acts as the nervous system between all Runtime layers.
 
+
 ---
 
 # Examples
@@ -210,3 +211,6 @@ Status
 Architecture Phase
 
 Ready
+
+---
+

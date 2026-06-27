@@ -316,3 +316,17 @@ The Executive must not perform a new decision when the proposed Runtime state is
 ## Executive Confidence Principle
 
 Every Executive decision carries a measurable confidence level that can later influence learning, adaptation and long-term reasoning.
+
+## Executive Stability Principle
+
+Executive behavior should avoid unnecessary oscillation.
+
+Repeated Runtime states should preserve operational stability whenever possible.
+
+---
+
+## Executive Consistency Principle
+
+Executive reasoning should remain internally consistent across equivalent Runtime contexts.
+
+Equivalent situations should naturally produce equivalent decisions unless Runtime learning explicitly changes the behavior.
