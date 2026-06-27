@@ -23,6 +23,10 @@ import {
 
 import { getEventPriority } from "./executivePriority";
 
+import {
+  getExecutiveConfidence,
+} from "./executiveConfidence";
+
 export function evaluateEvent(
   event: ReactorEvent
 ): ReactorState {
@@ -101,6 +105,11 @@ switch (nextState) {
     break;
 }
 rememberState(nextState);
+
+console.log(
+  "[Confidence]",
+  getExecutiveConfidence()
+);
 
 return makeExecutiveDecision(nextState);
 

@@ -254,6 +254,7 @@ Latest Runtime Evolution
 - Adaptive Decision Engine
 - Executive Conflict Resolution
 - Executive Decision Gate
+- Executive Confidence
 
 Core
 

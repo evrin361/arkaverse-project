@@ -9,6 +9,11 @@ import {
   getLastState,
 } from "./executiveMemory";
 
+import {
+  setExecutiveConfidence,
+} from "./executiveConfidence";
+
+
 export function makeExecutiveDecision(
   state: ReactorState
 ): ReactorState {
@@ -40,6 +45,16 @@ if (
 
 }
 
+
+if (memory === state) {
+
+  setExecutiveConfidence(1);
+
+} else {
+
+  setExecutiveConfidence(0.75);
+
+}
 return resolveConflict(
   state,
   memory

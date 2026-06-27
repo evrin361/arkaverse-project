@@ -312,3 +312,7 @@ When multiple Runtime states compete, the Executive must preserve the state with
 ## Executive Gate Principle
 
 The Executive must not perform a new decision when the proposed Runtime state is identical to the current validated state.
+
+## Executive Confidence Principle
+
+Every Executive decision carries a measurable confidence level that can later influence learning, adaptation and long-term reasoning.
