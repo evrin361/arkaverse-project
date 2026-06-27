@@ -1,5 +1,5 @@
 import type { ReactorState } from "../components/living-core/types";
-
+import { resolveConflict } from "./executiveConflict";
 import {
   getExecutiveIntent,
 } from "./executiveIntent";
@@ -34,4 +34,8 @@ if (memory === state) {
 
 }
 
-return state;}
+return resolveConflict(
+  state,
+  memory
+);
+}

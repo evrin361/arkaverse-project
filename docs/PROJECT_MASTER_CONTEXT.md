@@ -252,6 +252,7 @@ Latest Runtime Evolution
 - Executive Priority Awareness
 - Executive Decision Layer
 - Adaptive Decision Engine
+- Executive Conflict Resolution
 
 Core
 

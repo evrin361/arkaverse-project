@@ -304,3 +304,7 @@ Future Executive evolution must occur inside the Decision Layer without modifyin
 Repeated Runtime States should not trigger unnecessary transitions.
 
 Executive Decisions must preserve stability whenever no meaningful change is required.
+
+## Executive Conflict Principle
+
+When multiple Runtime states compete, the Executive must preserve the state with the highest operational importance unless a stronger transition is explicitly required.
