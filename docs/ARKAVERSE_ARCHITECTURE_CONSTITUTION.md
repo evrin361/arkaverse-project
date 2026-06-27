@@ -336,3 +336,11 @@ Equivalent situations should naturally produce equivalent decisions unless Runti
 Executive decisions must be based on contextual understanding rather than isolated events.
 
 Context combines Runtime history, Executive intent and state transitions to provide a richer foundation for future reasoning.
+
+## Executive Reasoning Principle
+
+Executive decisions should be explainable.
+
+Every Runtime decision should be accompanied by reasoning describing why the transition occurred.
+
+Reasoning prepares the Runtime for future learning, prediction and autonomous planning.

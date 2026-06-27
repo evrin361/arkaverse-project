@@ -1,6 +1,7 @@
 import type { ReactorState } from "../components/living-core/types";
 import { resolveConflict } from "./executiveConflict";
 import { shouldExecuteDecision } from "./executiveGate";
+import { buildExecutiveReasoning } from "./executiveReasoning";
 import {
   getExecutiveIntent,
 } from "./executiveIntent";
@@ -100,6 +101,11 @@ if (memory === state) {
 console.log(
   "[Consistency]",
   getExecutiveConsistency()
+);
+
+console.log(
+  "[Reasoning]",
+  buildExecutiveReasoning(state)
 );
 
 return resolveConflict(

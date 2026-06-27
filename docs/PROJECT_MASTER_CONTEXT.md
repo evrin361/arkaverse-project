@@ -258,6 +258,7 @@ Latest Runtime Evolution
 - Executive Stability
 - Executive Consistency
 - Executive Context Understanding
+- Executive Reasoning
 
 Core
 
@@ -377,6 +378,7 @@ The Executive Runtime now maintains:
 - Stability
 - Consistency
 - Context Understanding
+- Reasoning
 
 The Executive layer has evolved from simple event evaluation into a coherent cognitive decision pipeline capable of preserving behavioral continuity across Runtime execution.
 
