@@ -248,6 +248,7 @@ Latest Runtime Evolution
 - Runtime Awareness
 - Executive Memory
 - Executive Continuity
+- Executive Intent
 
 Core
 

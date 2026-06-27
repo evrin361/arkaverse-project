@@ -13,6 +13,12 @@ import {
   getLastState,
 } from "./executiveMemory";
 
+
+import {
+  setExecutiveIntent,
+} from "./executiveIntent";
+
+
 export function evaluateEvent(
   event: ReactorEvent
 ): ReactorState {
@@ -63,6 +69,25 @@ if (
   runtime
 );
 
+
+switch (nextState) {
+
+  case "idle":
+    setExecutiveIntent("Idle");
+    break;
+
+  case "focused":
+    setExecutiveIntent("Observing");
+    break;
+
+  case "thinking":
+    setExecutiveIntent("Processing");
+    break;
+
+  case "processing":
+    setExecutiveIntent("Responding");
+    break;
+}
 rememberState(nextState);
 
 return nextState;

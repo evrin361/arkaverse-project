@@ -274,3 +274,11 @@ Executive decisions may use runtime memory.
 Runtime memory must remain independent from UI components.
 
 Memory is part of Runtime Architecture, not Presentation.
+
+## Executive Intent Principle
+
+Executive State describes what the runtime currently is.
+
+Executive Intent describes what the runtime is trying to accomplish.
+
+Intent and State are related but must remain conceptually independent.
