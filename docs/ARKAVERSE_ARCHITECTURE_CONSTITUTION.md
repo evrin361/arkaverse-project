@@ -344,3 +344,9 @@ Executive decisions should be explainable.
 Every Runtime decision should be accompanied by reasoning describing why the transition occurred.
 
 Reasoning prepares the Runtime for future learning, prediction and autonomous planning.
+
+## Executive Prediction Principle
+
+Executive reasoning should estimate the likely outcome of a decision before execution.
+
+Prediction is advisory and prepares the Runtime for future learning, planning and autonomous behavior.

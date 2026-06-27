@@ -1,7 +1,9 @@
 import type { ReactorState } from "../components/living-core/types";
 import { resolveConflict } from "./executiveConflict";
 import { shouldExecuteDecision } from "./executiveGate";
+import { predictExecutiveOutcome } from "./executivePrediction";
 import { buildExecutiveReasoning } from "./executiveReasoning";
+
 import {
   getExecutiveIntent,
 } from "./executiveIntent";
@@ -41,6 +43,12 @@ const context = buildExecutiveContext(state);
 console.log(
   "[Context]",
   context
+);
+
+
+console.log(
+    "[Prediction]",
+    predictExecutiveOutcome(state)
 );
 
   console.log(
