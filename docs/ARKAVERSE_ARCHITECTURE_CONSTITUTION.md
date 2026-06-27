@@ -330,3 +330,9 @@ Repeated Runtime states should preserve operational stability whenever possible.
 Executive reasoning should remain internally consistent across equivalent Runtime contexts.
 
 Equivalent situations should naturally produce equivalent decisions unless Runtime learning explicitly changes the behavior.
+
+## Executive Context Principle
+
+Executive decisions must be based on contextual understanding rather than isolated events.
+
+Context combines Runtime history, Executive intent and state transitions to provide a richer foundation for future reasoning.

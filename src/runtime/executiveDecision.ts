@@ -23,6 +23,9 @@ import {
   getExecutiveConsistency,
 } from "./executiveConsistency";
 
+import {
+  buildExecutiveContext,
+} from "./executiveContext";
 
 export function makeExecutiveDecision(
   state: ReactorState
@@ -31,6 +34,14 @@ export function makeExecutiveDecision(
   const intent = getExecutiveIntent();
 
 const memory = getLastState();
+
+const context = buildExecutiveContext(state);
+
+console.log(
+  "[Context]",
+  context
+);
+
   console.log(
     "[Decision]",
     {
