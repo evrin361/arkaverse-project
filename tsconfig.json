@@ -12,16 +12,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "incremental": true,
-    "plugins": [
+
+   "incremental": true,
+
+"plugins": [
   {
     "name": "next"
   }
 ],
 
+"baseUrl": ".",
 
 "paths": {
-  "@/*": ["./*"]
+  "@/*": ["src/*"]
 }
   },
   "include": [

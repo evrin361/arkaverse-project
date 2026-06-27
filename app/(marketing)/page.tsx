@@ -1,7 +1,7 @@
-import { Shell } from "@/src/design-system/shell/Shell";
-import { Button } from "@/src/design-system/primitives/Button";
-import { Card } from "@/src/design-system/primitives/Card";
-import { Input } from "@/src/design-system/primitives/Input";
+import { Shell } from "../../src/design-system/shell/Shell";
+import { Button } from "../../src/design-system/primitives/Button";
+import { Card } from "../../src/design-system/primitives/Card";
+import { Input } from "../../src/design-system/primitives/Input";
 
 export default function Home() {
   return (

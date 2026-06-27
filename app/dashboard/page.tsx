@@ -1,5 +1,6 @@
 "use client";
 
+
 import "../../src/runtime/replay/replay-engine";
 
 import { ArkaOrb } from "../../src/components/arkaverse/ArkaOrb";
@@ -49,6 +50,9 @@ export default function DashboardPage() {
   const operationalHealth = useOperationalHealth();
   const statusSummary = useStatusSummary();
   const executiveDashboard = useExecutiveDashboard();
+
+
+
 
   return (
     <div

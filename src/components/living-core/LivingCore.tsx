@@ -16,8 +16,19 @@ export function LivingCore({
 
     const behavior = getReactorBehavior(state);
   return (
-    <div className="relative w-[520px] h-[520px] flex items-center justify-center">
-<EnergyField behavior={behavior.energy} />
+<div
+  className="
+    relative
+    w-[520px]
+    h-[520px]
+    flex
+    items-center
+    justify-center
+    transition-all
+    duration-700
+    ease-out
+  "
+><EnergyField behavior={behavior.energy} />
 
 <IdentityShell />
 
@@ -29,7 +40,8 @@ export function LivingCore({
 <Core
   glow={behavior.coreGlow}
   scale={behavior.coreScale}
-/>  
+  transition="700ms"
+/>
   </div>
   );
 }
