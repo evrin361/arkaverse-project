@@ -2,9 +2,36 @@
 
 import { useRuntimeUI } from "@/runtime/useRuntimeUI";
 import { ExecutivePanel } from "./ExecutivePanel";
+import { BusinessPanel } from "./BusinessPanel";
+
+import type { RuntimePanel } from "@/runtime/runtimeUI";
+import type { ReactNode } from "react";
 
 export function RuntimePanelRouter() {
   const ui = useRuntimeUI();
+
+
+  const panels = {
+  dashboard: (
+    <div>Dashboard Home</div>
+  ),
+
+  executive: <ExecutivePanel />,
+
+  business: <BusinessPanel />,
+
+  memory: (
+    <div>Memory Panel (Coming Soon)</div>
+  ),
+
+  living: (
+    <div>Living Panel (Coming Soon)</div>
+  ),
+
+  identity: (
+    <div>Identity Panel (Coming Soon)</div>
+  ),
+} satisfies Record<RuntimePanel, ReactNode>;
 
   return (
     <div className="mt-6 rounded-lg border border-cyan-700/30 p-4">
@@ -12,9 +39,9 @@ export function RuntimePanelRouter() {
         Runtime Panel
       </div>
 
-      {ui.activePanel === "executive" && (
-  <ExecutivePanel />
-)}
+
+{panels[ui.activePanel]}
+     
     </div>
   );
 }

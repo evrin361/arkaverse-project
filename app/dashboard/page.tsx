@@ -35,11 +35,8 @@ import LivingDashboard from "@/components/living-interface/LivingDashboard";
 import { useRuntimeUI } from "@/runtime/useRuntimeUI";
 import { toggleSidebar } from "@/runtime/runtimeUIActions";
 
-import {
-  openPanel,
-} from "@/runtime/runtimeUIActions";
-
 import { RuntimePanelRouter } from "@/components/living-interface/RuntimePanelRouter";
+import { setActivePanel } from "@/runtime/runtimeUIActions";
 
 export default function DashboardPage() {
   const { render, trigger } = useIdentityRender();
@@ -103,6 +100,12 @@ const ui = useRuntimeUI();
   Sidebar: {ui.sidebarOpen ? "OPEN" : "CLOSED"}
 </div>
 
+<button
+  onClick={() => setActivePanel("dashboard")}
+  className="rounded border px-3 py-2"
+>
+  Dashboard
+</button>
 
 <button
   onClick={toggleSidebar}
@@ -113,14 +116,14 @@ const ui = useRuntimeUI();
 
 
 <button
-  onClick={() => openPanel("executive")}
+  onClick={() => setActivePanel("executive")}
   className="border px-3 py-1 rounded"
 >
   Executive Panel
 </button>
 
 <button
-  onClick={() => openPanel("business")}
+  onClick={() => setActivePanel("business")}
   className="border px-3 py-1 rounded ml-2"
 >
   Business Panel

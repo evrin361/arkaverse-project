@@ -21,10 +21,3 @@ export function setTheme(theme: "dark" | "light") {
   });
 }
 
-export function openPanel(
-  panel: RuntimePanel
-) {
-  updateRuntimeUI({
-    activePanel: panel,
-  });
-}
