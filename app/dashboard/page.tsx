@@ -39,6 +39,7 @@ import {
   openPanel,
 } from "@/runtime/runtimeUIActions";
 
+import { RuntimePanelRouter } from "@/components/living-interface/RuntimePanelRouter";
 
 export default function DashboardPage() {
   const { render, trigger } = useIdentityRender();
@@ -95,7 +96,7 @@ const ui = useRuntimeUI();
 </div>
 
 <div className="text-xs opacity-60">
-  Active Panel: {ui.activePanel}
+  <RuntimePanelRouter />
 </div>
 
 <div className="text-xs opacity-60">
