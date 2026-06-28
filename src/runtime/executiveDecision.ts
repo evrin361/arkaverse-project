@@ -72,6 +72,11 @@ import {
   getExecutiveStrategy,
 } from "./executiveStrategy";
 
+import {
+  evaluateExecutiveDecision,
+  getExecutiveEvaluation,
+} from "./executiveEvaluation";
+
 export function makeExecutiveDecision(
   state: ReactorState
 ): ReactorState {
@@ -219,6 +224,8 @@ buildExecutivePlan(state);
 
 buildExecutiveStrategy(state);
 
+evaluateExecutiveDecision(state);
+
 
 if (memory === state) {
 
@@ -258,6 +265,12 @@ const reasoning =
   "[Strategy]",
   getExecutiveStrategy()
 );
+
+console.log(
+  "[Evaluation]",
+  getExecutiveEvaluation()
+);
+
 
 console.log(
   "[Reasoning]",

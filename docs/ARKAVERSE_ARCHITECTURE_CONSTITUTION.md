@@ -396,3 +396,9 @@ Planning determines the execution path.
 Strategy determines the philosophy of execution.
 
 Multiple plans may share one strategy.
+
+## Executive Evaluation Principle
+
+Every Executive decision should produce an internal evaluation.
+
+Evaluation provides feedback for future learning, adaptation and optimization.
