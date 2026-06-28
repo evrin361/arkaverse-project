@@ -245,6 +245,7 @@ Current Runtime Modules
 - Executive Learning
 - Executive Experience
 - Executive Personality
+- Executive Goals
 
 Latest Runtime Evolution
 
@@ -264,6 +265,7 @@ Latest Runtime Evolution
 - Executive Reasoning
 - Executive Experience
 - Executive Personality
+- Executive Goals
 
 Core
 
@@ -389,6 +391,7 @@ The Executive Runtime now maintains:
 - Experience
 - Behavior
 - Personality
+- Goals
 
 The Executive layer has evolved from simple event evaluation into a coherent cognitive decision pipeline capable of preserving behavioral continuity across Runtime execution.
 

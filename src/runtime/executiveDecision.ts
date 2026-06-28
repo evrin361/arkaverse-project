@@ -55,6 +55,11 @@ import {
   getExecutivePersonality,
 } from "./executivePersonality";
 
+import {
+  setExecutiveGoal,
+  getExecutiveGoal,
+} from "./executiveGoals";
+
 export function makeExecutiveDecision(
   state: ReactorState
 ): ReactorState {
@@ -165,6 +170,36 @@ updateExecutivePersonality(
 console.log(
   "[Personality]",
   getExecutivePersonality()
+);
+
+
+if (
+  getExecutiveBehavior() === "confident"
+) {
+
+  setExecutiveGoal(
+    "Optimize Runtime"
+  );
+
+} else if (
+  getExecutiveBehavior() === "stable"
+) {
+
+  setExecutiveGoal(
+    "Maintain Stability"
+  );
+
+} else {
+
+  setExecutiveGoal(
+    "Reduce Uncertainty"
+  );
+
+}
+
+console.log(
+  "[Goal]",
+  getExecutiveGoal()
 );
 
 

@@ -372,3 +372,9 @@ Executive Behavior reflects current operational conditions.
 Executive Personality represents the long-term behavioral identity of the Runtime Executive.
 
 Future planning, communication style and strategic behavior may evolve according to Executive Personality.
+
+## Executive Goal Principle
+
+Executive Goals define the long-term operational direction of the Runtime.
+
+Immediate decisions should increasingly align with active goals as the Executive evolves toward strategic autonomy.
