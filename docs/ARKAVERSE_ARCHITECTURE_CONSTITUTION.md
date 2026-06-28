@@ -388,3 +388,11 @@ Goals define what should be achieved.
 Planning defines how it should be achieved.
 
 Planning exists between Goals and Decisions.
+
+## Executive Strategy Principle
+
+Planning determines the execution path.
+
+Strategy determines the philosophy of execution.
+
+Multiple plans may share one strategy.
