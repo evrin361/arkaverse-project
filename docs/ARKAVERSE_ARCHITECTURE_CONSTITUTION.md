@@ -421,3 +421,29 @@ The Executive Runtime maintains a persistent operational identity.
 
 Identity represents who the Executive is,
 independent from temporary Runtime state.
+
+## Executive Cognitive Principle
+
+The Executive Runtime is the primary cognitive subsystem of ARKAVERSE.
+
+Executive cognition is responsible for:
+
+- Memory
+- Context
+- Intent
+- Reasoning
+- Prediction
+- Learning
+- Experience
+- Personality
+- Goals
+- Planning
+- Strategy
+- Evaluation
+- Adaptation
+- Mission
+- Identity
+
+Future Runtime evolution should extend this cognitive architecture rather than introducing parallel intelligence systems.
+
+The Executive remains the single authoritative decision layer of the Runtime.
