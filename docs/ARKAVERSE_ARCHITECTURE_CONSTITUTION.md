@@ -414,3 +414,10 @@ Adaptation enables continuous improvement without external intervention.
 Executive decisions should remain aligned with the long-term mission of the Runtime.
 
 Mission represents permanent direction rather than temporary goals.
+
+## Executive Identity Principle
+
+The Executive Runtime maintains a persistent operational identity.
+
+Identity represents who the Executive is,
+independent from temporary Runtime state.

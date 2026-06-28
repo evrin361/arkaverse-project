@@ -86,6 +86,10 @@ import {
   getExecutiveMission,
 } from "./executiveMission";
 
+import {
+  getExecutiveIdentity,
+} from "./executiveIdentity";
+
 export function makeExecutiveDecision(
   state: ReactorState
 ): ReactorState {
@@ -98,6 +102,9 @@ const context = buildExecutiveContext(state);
 
 const mission =
   getExecutiveMission();
+
+  const identity =
+  getExecutiveIdentity();
 
 const prediction =
   predictExecutiveOutcome(state);
@@ -126,6 +133,7 @@ console.log(
   intent,
   memory,
   mission,
+  identity,
 }
   );
 
@@ -299,6 +307,12 @@ console.log(
   "[Mission]",
   mission
 );
+
+console.log(
+  "[Identity]",
+  identity
+);
+
 
 console.log(
   "[Reasoning]",
