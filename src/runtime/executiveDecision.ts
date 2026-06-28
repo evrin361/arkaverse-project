@@ -77,6 +77,12 @@ import {
   getExecutiveEvaluation,
 } from "./executiveEvaluation";
 
+import {
+  adaptExecutiveBehavior,
+  getExecutiveAdaptation,
+} from "./executiveAdaptation";
+
+
 export function makeExecutiveDecision(
   state: ReactorState
 ): ReactorState {
@@ -226,6 +232,10 @@ buildExecutiveStrategy(state);
 
 evaluateExecutiveDecision(state);
 
+adaptExecutiveBehavior(
+  getExecutiveEvaluation()
+);
+
 
 if (memory === state) {
 
@@ -269,6 +279,12 @@ const reasoning =
 console.log(
   "[Evaluation]",
   getExecutiveEvaluation()
+);
+
+
+console.log(
+  "[Adaptation]",
+  getExecutiveAdaptation()
 );
 
 

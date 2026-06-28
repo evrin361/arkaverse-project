@@ -402,3 +402,9 @@ Multiple plans may share one strategy.
 Every Executive decision should produce an internal evaluation.
 
 Evaluation provides feedback for future learning, adaptation and optimization.
+
+## Executive Adaptation Principle
+
+Executive behavior should evolve according to previous evaluation results.
+
+Adaptation enables continuous improvement without external intervention.
