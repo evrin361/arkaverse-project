@@ -1,4 +1,6 @@
-import type { ReactorState } from "../components/living-core/types";/**
+import type { ReactorState } from "../components/living-core/types";
+/**
+
  * Runtime → Reactor Adapter
  *
  * This hook is the only place responsible for translating

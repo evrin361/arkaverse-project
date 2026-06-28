@@ -31,6 +31,15 @@ import { useOperationalHealth } from "../../src/runtime/useOperationalHealth";
 import { useStatusSummary } from "../../src/runtime/useStatusSummary";
 import { useExecutiveDashboard } from "../../src/runtime/useExecutiveDashboard";
 
+import LivingDashboard from "@/components/living-interface/LivingDashboard";
+import { useRuntimeUI } from "@/runtime/useRuntimeUI";
+import { toggleSidebar } from "@/runtime/runtimeUIActions";
+
+import {
+  openPanel,
+} from "@/runtime/runtimeUIActions";
+
+
 export default function DashboardPage() {
   const { render, trigger } = useIdentityRender();
 
@@ -53,6 +62,7 @@ export default function DashboardPage() {
 
 
 
+const ui = useRuntimeUI();
 
   return (
     <div
@@ -75,7 +85,53 @@ export default function DashboardPage() {
           ARKAVERSE DASHBOARD
         </div>
 
+<div className="mt-6">
+  <LivingDashboard />
+</div>
+
+
+<div className="text-xs opacity-60 mt-4">
+  Theme: {ui.theme}
+</div>
+
+<div className="text-xs opacity-60">
+  Active Panel: {ui.activePanel}
+</div>
+
+<div className="text-xs opacity-60">
+  Sidebar: {ui.sidebarOpen ? "OPEN" : "CLOSED"}
+</div>
+
+
+<button
+  onClick={toggleSidebar}
+  className="border px-3 py-1 rounded mt-4"
+>
+  Toggle Sidebar Runtime
+</button>
+
+
+<button
+  onClick={() => openPanel("executive")}
+  className="border px-3 py-1 rounded"
+>
+  Executive Panel
+</button>
+
+<button
+  onClick={() => openPanel("business")}
+  className="border px-3 py-1 rounded ml-2"
+>
+  Business Panel
+</button>
+
+
+<div className="text-xs opacity-60">
+  Active Panel: {ui.activePanel}
+</div>
+
         <div>
+
           Identity State: {identity.identityState}
         </div>
       </div>

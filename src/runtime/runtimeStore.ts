@@ -32,6 +32,6 @@ export function subscribeRuntime(
   listeners.add(listener);
 
   return () => {
-    listeners.delete(listener);
-  };
+  listeners.delete(listener);
+};
 }
