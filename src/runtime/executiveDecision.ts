@@ -14,6 +14,7 @@ import {
 
 import {
   setExecutiveConfidence,
+  getExecutiveConfidence,
 } from "./executiveConfidence";
 
 
@@ -42,6 +43,17 @@ import {
   getExecutiveExperience,
 
 } from "./executiveExperience";
+
+import {
+  updateExecutiveBehavior,
+  getExecutiveBehavior,
+} from "./executiveBehavior";
+
+
+import {
+  updateExecutivePersonality,
+  getExecutivePersonality,
+} from "./executivePersonality";
 
 export function makeExecutiveDecision(
   state: ReactorState
@@ -136,6 +148,25 @@ if (memory === state) {
   setExecutiveConfidence(0.75);
 
 }
+
+updateExecutiveBehavior(
+  getExecutiveConfidence()
+);
+
+console.log(
+  "[Behavior]",
+  getExecutiveBehavior()
+);
+
+updateExecutivePersonality(
+  getExecutiveBehavior()
+);
+
+console.log(
+  "[Personality]",
+  getExecutivePersonality()
+);
+
 
 if (memory === state) {
 

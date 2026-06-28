@@ -365,3 +365,10 @@ Learning preserves knowledge.
 Experience preserves operational history.
 
 Executive Experience stores runtime decisions together with their confidence and prediction so future Runtime capabilities can reason using accumulated operational experience.
+## Executive Personality Principle
+
+Executive Behavior reflects current operational conditions.
+
+Executive Personality represents the long-term behavioral identity of the Runtime Executive.
+
+Future planning, communication style and strategic behavior may evolve according to Executive Personality.
