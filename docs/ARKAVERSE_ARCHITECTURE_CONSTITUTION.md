@@ -408,3 +408,9 @@ Evaluation provides feedback for future learning, adaptation and optimization.
 Executive behavior should evolve according to previous evaluation results.
 
 Adaptation enables continuous improvement without external intervention.
+
+## Executive Mission Principle
+
+Executive decisions should remain aligned with the long-term mission of the Runtime.
+
+Mission represents permanent direction rather than temporary goals.

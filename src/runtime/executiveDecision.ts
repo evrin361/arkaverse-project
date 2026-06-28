@@ -82,6 +82,9 @@ import {
   getExecutiveAdaptation,
 } from "./executiveAdaptation";
 
+import {
+  getExecutiveMission,
+} from "./executiveMission";
 
 export function makeExecutiveDecision(
   state: ReactorState
@@ -92,6 +95,9 @@ export function makeExecutiveDecision(
 const memory = getLastState();
 
 const context = buildExecutiveContext(state);
+
+const mission =
+  getExecutiveMission();
 
 const prediction =
   predictExecutiveOutcome(state);
@@ -116,10 +122,11 @@ console.log(
   console.log(
     "[Decision]",
     {
-      state,
-      intent,
-      memory,
-    }
+  state,
+  intent,
+  memory,
+  mission,
+}
   );
 
 if (
@@ -287,6 +294,11 @@ console.log(
   getExecutiveAdaptation()
 );
 
+
+console.log(
+  "[Mission]",
+  mission
+);
 
 console.log(
   "[Reasoning]",
