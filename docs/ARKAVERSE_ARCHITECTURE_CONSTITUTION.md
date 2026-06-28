@@ -358,3 +358,10 @@ The Executive Runtime should preserve operational experience.
 Learning records previous predictions and decisions to enable future adaptation, optimization and autonomous reasoning.
 
 Learning must remain independent from presentation and operate entirely inside the Runtime layer.
+## Executive Experience Principle
+
+Learning preserves knowledge.
+
+Experience preserves operational history.
+
+Executive Experience stores runtime decisions together with their confidence and prediction so future Runtime capabilities can reason using accumulated operational experience.

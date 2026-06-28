@@ -35,6 +35,14 @@ import {
   getExecutiveLearning,
 } from "./executiveLearning";
 
+import {
+
+  rememberExecutiveExperience,
+
+  getExecutiveExperience,
+
+} from "./executiveExperience";
+
 export function makeExecutiveDecision(
   state: ReactorState
 ): ReactorState {
@@ -97,6 +105,25 @@ learnExecutiveDecision(
 console.log(
   "[Learning]",
   getExecutiveLearning()
+);
+
+
+rememberExecutiveExperience(
+
+  state,
+
+  prediction,
+
+  memory === state ? 1 : 0.75
+
+);
+
+console.log(
+
+  "[Experience]",
+
+  getExecutiveExperience()
+
 );
 
 

@@ -243,6 +243,7 @@ Current Runtime Modules
 - Executive Memory
 - Reactor Driver
 - Executive Learning
+- Executive Experience
 
 Latest Runtime Evolution
 
@@ -260,6 +261,7 @@ Latest Runtime Evolution
 - Executive Consistency
 - Executive Context Understanding
 - Executive Reasoning
+- Executive Experience
 
 Core
 
@@ -382,6 +384,7 @@ The Executive Runtime now maintains:
 - Reasoning
 - Prediction
 - Learning
+- Experience
 
 The Executive layer has evolved from simple event evaluation into a coherent cognitive decision pipeline capable of preserving behavioral continuity across Runtime execution.
 
