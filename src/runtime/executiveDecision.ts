@@ -60,6 +60,13 @@ import {
   getExecutiveGoal,
 } from "./executiveGoals";
 
+
+import {
+  buildExecutivePlan,
+  getExecutivePlan,
+} from "./executivePlanning";
+
+
 export function makeExecutiveDecision(
   state: ReactorState
 ): ReactorState {
@@ -203,6 +210,8 @@ console.log(
 );
 
 
+buildExecutivePlan(state);
+
 if (memory === state) {
 
   setExecutiveStability(1);
@@ -227,6 +236,12 @@ console.log(
   "[Consistency]",
   getExecutiveConsistency()
 );
+
+console.log(
+  "[Planning]",
+  getExecutivePlan()
+);
+
 
 const reasoning =
   buildExecutiveReasoning(state);

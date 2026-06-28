@@ -358,6 +358,7 @@ The Executive Runtime should preserve operational experience.
 Learning records previous predictions and decisions to enable future adaptation, optimization and autonomous reasoning.
 
 Learning must remain independent from presentation and operate entirely inside the Runtime layer.
+
 ## Executive Experience Principle
 
 Learning preserves knowledge.
@@ -365,6 +366,7 @@ Learning preserves knowledge.
 Experience preserves operational history.
 
 Executive Experience stores runtime decisions together with their confidence and prediction so future Runtime capabilities can reason using accumulated operational experience.
+
 ## Executive Personality Principle
 
 Executive Behavior reflects current operational conditions.
@@ -378,3 +380,11 @@ Future planning, communication style and strategic behavior may evolve according
 Executive Goals define the long-term operational direction of the Runtime.
 
 Immediate decisions should increasingly align with active goals as the Executive evolves toward strategic autonomy.
+
+## Executive Planning Principle
+
+Goals define what should be achieved.
+
+Planning defines how it should be achieved.
+
+Planning exists between Goals and Decisions.
