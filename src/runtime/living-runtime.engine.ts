@@ -1,10 +1,10 @@
-
+import type { RuntimeContract } from "./contracts/runtimeContract";
 import type {
   LivingRuntimeSnapshot,
 } from "./livingRuntime";
 
-export const livingEngine = {
-  inspect(): LivingRuntimeSnapshot {
+export const livingRuntimeEngine: RuntimeContract<LivingRuntimeSnapshot> = {
+      inspect(): LivingRuntimeSnapshot {
     return {
       lifeState: "idle",
 

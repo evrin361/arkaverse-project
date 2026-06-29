@@ -3,7 +3,7 @@
 
 import { useEffect } from "react";
 
-import { livingEngine } from "./livingEngine";
+import { livingRuntimeEngine } from "./living-runtime.engine";
 import { refreshLivingRuntime } from "./livingRuntimeActions";
 import { getLivingRuntime } from "./livingRuntimeStore";
 import { useRuntimeSubscription } from "./useRuntimeSubscription";
@@ -14,7 +14,7 @@ export function useLivingRuntime() {
 
   useEffect(() => {
     const snapshot =
-      livingEngine.inspect();
+      livingRuntimeEngine.inspect();
 
     refreshLivingRuntime(snapshot);
   }, []);

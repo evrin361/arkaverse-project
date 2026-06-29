@@ -38,6 +38,8 @@ import { toggleSidebar } from "@/runtime/runtimeUIActions";
 import { RuntimePanelRouter } from "@/components/living-interface/RuntimePanelRouter";
 import { setActivePanel } from "@/runtime/runtimeUIActions";
 
+import { RuntimeOverviewPanel } from "@/components/living-interface/RuntimeOverviewPanel";
+
 export default function DashboardPage() {
   const { render, trigger } = useIdentityRender();
 
@@ -232,6 +234,10 @@ const ui = useRuntimeUI();
           trend={executiveDashboard.trend}
           summary={executiveDashboard.summary}
         />
+
+
+<RuntimeOverviewPanel />
+
       </div>
     </div>
   );
