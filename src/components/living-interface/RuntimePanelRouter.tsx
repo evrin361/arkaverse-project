@@ -11,6 +11,8 @@ import { MemoryPanel } from "./MemoryPanel";
 
 import { LivingRuntimePanel } from "./LivingRuntimePanel";
 
+import { IdentityPanel } from "./IdentityPanel";
+
 export function RuntimePanelRouter() {
   const ui = useRuntimeUI();
 
@@ -28,9 +30,7 @@ export function RuntimePanelRouter() {
 
   living: <LivingRuntimePanel />,
 
-  identity: (
-    <div>Identity Panel (Coming Soon)</div>
-  ),
+identity: <IdentityPanel />,
 } satisfies Record<RuntimePanel, ReactNode>;
 
   return (

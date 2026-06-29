@@ -152,6 +152,12 @@ const ui = useRuntimeUI();
   Living Panel
 </button>
 
+<button
+  onClick={() => setActivePanel("identity")}
+  className="rounded border px-3 py-2"
+>
+  Identity Panel
+</button>
 
 <div className="text-xs opacity-60">
   Active Panel: {ui.activePanel}

@@ -114,3 +114,49 @@ Responsibilities:
 # Runtime Principle
 
 Every future capability must be introduced as a Runtime before becoming a UI feature.
+
+# Runtime Roadmap
+
+## ✅ Milestone 001
+
+Runtime UI
+
+Status: Completed
+
+---
+
+## ✅ Milestone 002
+
+Runtime Memory
+
+Status: Completed
+
+---
+
+## ✅ Milestone 003
+
+Runtime Living
+
+Status: Completed
+
+Achievements:
+
+* Living Runtime Contract
+* Living Runtime Store
+* Living Runtime Actions
+* Living Runtime Engine
+* Living Runtime Hook
+* Living Runtime Panel
+* Runtime Router Integration
+
+---
+
+## ⏳ Milestone 004
+
+Runtime Identity
+
+Status: Planned
+
+Objective:
+
+Design and implement Arkaverse Identity Runtime using the validated Runtime Genome architecture.
