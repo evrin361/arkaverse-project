@@ -145,6 +145,14 @@ const ui = useRuntimeUI();
   Memory Panel
 </button>
 
+<button
+  onClick={() => setActivePanel("living")}
+  className="rounded border px-3 py-2"
+>
+  Living Panel
+</button>
+
+
 <div className="text-xs opacity-60">
   Active Panel: {ui.activePanel}
 </div>

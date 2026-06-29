@@ -9,6 +9,8 @@ import type { ReactNode } from "react";
 
 import { MemoryPanel } from "./MemoryPanel";
 
+import { LivingRuntimePanel } from "./LivingRuntimePanel";
+
 export function RuntimePanelRouter() {
   const ui = useRuntimeUI();
 
@@ -24,9 +26,7 @@ export function RuntimePanelRouter() {
 
   memory: <MemoryPanel />,
 
-  living: (
-    <div>Living Panel (Coming Soon)</div>
-  ),
+  living: <LivingRuntimePanel />,
 
   identity: (
     <div>Identity Panel (Coming Soon)</div>
