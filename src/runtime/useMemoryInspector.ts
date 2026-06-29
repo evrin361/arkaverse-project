@@ -1,11 +1,11 @@
 "use client";
 
-import { memoryInspectorEngine } from "./memory-inspector.engine";
+import { useMemoryRuntime } from "./useMemoryRuntime";
 
 export function useMemoryInspector() {
-  const memory = memoryInspectorEngine.inspect();
+  const runtime = useMemoryRuntime();
 
   return {
-    memory,
+    memory: runtime.snapshot,
   };
 }

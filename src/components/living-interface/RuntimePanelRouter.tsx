@@ -7,6 +7,8 @@ import { BusinessPanel } from "./BusinessPanel";
 import type { RuntimePanel } from "@/runtime/runtimeUI";
 import type { ReactNode } from "react";
 
+import { MemoryPanel } from "./MemoryPanel";
+
 export function RuntimePanelRouter() {
   const ui = useRuntimeUI();
 
@@ -20,9 +22,7 @@ export function RuntimePanelRouter() {
 
   business: <BusinessPanel />,
 
-  memory: (
-    <div>Memory Panel (Coming Soon)</div>
-  ),
+  memory: <MemoryPanel />,
 
   living: (
     <div>Living Panel (Coming Soon)</div>

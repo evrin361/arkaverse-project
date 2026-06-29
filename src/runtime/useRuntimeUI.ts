@@ -1,18 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-import {
-  getRuntimeUI,
-  subscribeRuntimeUI,
-} from "./runtimeUIStore";
+import { getRuntimeUI } from "./runtimeUIStore";
+import { useRuntimeSubscription } from "./useRuntimeSubscription";
 
 export function useRuntimeUI() {
-  const [ui, setUI] = useState(getRuntimeUI());
-
-  useEffect(() => {
-    return subscribeRuntimeUI(setUI);
-  }, []);
-
-  return ui;
+  return useRuntimeSubscription(getRuntimeUI);
 }

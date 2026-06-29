@@ -3,6 +3,8 @@ import {
   type RuntimeUI,
 } from "./runtimeUI";
 
+import { notifyRuntime } from "./runtimeObservable";
+
 let runtimeUI = { ...defaultRuntimeUI };
 
 const listeners = new Set<(ctx: RuntimeUI) => void>();
@@ -18,6 +20,8 @@ export function updateRuntimeUI(
     ...runtimeUI,
     ...partial,
   };
+
+notifyRuntime();
 
   listeners.forEach((listener) => listener(runtimeUI));
 }

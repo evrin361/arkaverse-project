@@ -1,16 +1,16 @@
 "use client";
 
-import "../../src/runtime/replay/replay-engine";
-import { useIdentityRender } from "../../src/runtime/useIdentityRender";
-import { ArkaOrb } from "../../src/components/arkaverse/ArkaOrb";
-import { useRuntimeInspector } from "../../src/runtime/useRuntimeInspector";
-import { useIdentityInspector } from "../../src/runtime/useIdentityInspector";
-import { useMemoryInspector } from "../../src/runtime/useMemoryInspector";
-import { useOperationalSignals } from "../../src/runtime/useOperationalSignals";
-import { useBusinessSignals } from "../../src/runtime/useBusinessSignals";
-import { useRecommendation } from "../../src/runtime/useRecommendation";
-import { useRecommendationHistory } from "../../src/runtime/useRecommendationHistory";
-import { useDecisionInsights } from "../../src/runtime/useDecisionInsights";
+import "../src/runtime/replay/replay-engine";
+import { useIdentityRender } from "../src/runtime/useIdentityRender";
+import { ArkaOrb } from "../src/components/arkaverse/ArkaOrb";
+import { useRuntimeInspector } from "../src/runtime/useRuntimeInspector";
+import { useIdentityInspector } from "../src/runtime/useIdentityInspector";
+import { useMemoryInspector } from "../src/runtime/useMemoryInspector";
+import { useOperationalSignals } from "../src/runtime/useOperationalSignals";
+import { useBusinessSignals } from "../src/runtime/useBusinessSignals";
+import { useRecommendation } from "../src/runtime/useRecommendation";
+import { useRecommendationHistory } from "../src/runtime/useRecommendationHistory";
+import { useDecisionInsights } from "../src/runtime/useDecisionInsights";
 
 export default function DashboardPage() {
   const {

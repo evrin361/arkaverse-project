@@ -45,6 +45,12 @@ export default function DashboardPage() {
   const identity = useIdentityInspector();
   const memory = useMemoryInspector();
 
+  const snapshot = memory.memory;
+
+if (!snapshot) {
+  return <div>Loading memory...</div>;
+}
+
   const signals = useOperationalSignals();
   const business = useBusinessSignals();
 
@@ -100,12 +106,7 @@ const ui = useRuntimeUI();
   Sidebar: {ui.sidebarOpen ? "OPEN" : "CLOSED"}
 </div>
 
-<button
-  onClick={() => setActivePanel("dashboard")}
-  className="rounded border px-3 py-2"
->
-  Dashboard
-</button>
+
 
 <button
   onClick={toggleSidebar}
@@ -113,6 +114,16 @@ const ui = useRuntimeUI();
 >
   Toggle Sidebar Runtime
 </button>
+
+
+<button
+  onClick={() => setActivePanel("dashboard")}
+  className="rounded border px-3 py-2"
+>
+  Dashboard
+</button>
+
+
 
 
 <button
@@ -129,6 +140,12 @@ const ui = useRuntimeUI();
   Business Panel
 </button>
 
+<button
+  onClick={() => setActivePanel("memory")}
+  className="rounded border px-3 py-2"
+>
+  Memory Panel
+</button>
 
 <div className="text-xs opacity-60">
   Active Panel: {ui.activePanel}
@@ -149,11 +166,11 @@ const ui = useRuntimeUI();
         />
 
         <MemoryCard
-          systemStatus={memory.memory.systemStatus}
-          lastEventType={memory.memory.lastEventType}
-          lastEventTimestamp={memory.memory.lastEventTimestamp}
-          lastBehaviorState={memory.memory.lastBehaviorState}
-          lastBehaviorIntensity={memory.memory.lastBehaviorIntensity}
+          systemStatus={snapshot.systemStatus}
+          lastEventType={snapshot.lastEventType}
+          lastEventTimestamp={snapshot.lastEventTimestamp}
+          lastBehaviorState={snapshot.lastBehaviorState}
+          lastBehaviorIntensity={snapshot.lastBehaviorIntensity}
         />
 
         <OperationalSignalsCard
