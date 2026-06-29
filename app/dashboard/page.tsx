@@ -47,9 +47,7 @@ export default function DashboardPage() {
 
   const snapshot = memory.memory;
 
-if (!snapshot) {
-  return <div>Loading memory...</div>;
-}
+
 
   const signals = useOperationalSignals();
   const business = useBusinessSignals();
@@ -166,12 +164,12 @@ const ui = useRuntimeUI();
         />
 
         <MemoryCard
-          systemStatus={snapshot.systemStatus}
-          lastEventType={snapshot.lastEventType}
-          lastEventTimestamp={snapshot.lastEventTimestamp}
-          lastBehaviorState={snapshot.lastBehaviorState}
-          lastBehaviorIntensity={snapshot.lastBehaviorIntensity}
-        />
+  systemStatus={snapshot?.systemStatus ?? "Loading"}
+  lastEventType={snapshot?.lastEventType ?? "-"}
+  lastEventTimestamp={snapshot?.lastEventTimestamp ?? null}
+  lastBehaviorState={snapshot?.lastBehaviorState ?? "-"}
+  lastBehaviorIntensity={snapshot?.lastBehaviorIntensity ?? "-"}
+/>
 
         <OperationalSignalsCard
           health={signals.health}
