@@ -3,6 +3,7 @@
 
 import { useIdentityRuntime } from "@/runtime/useIdentityRuntime";
 import { Panel } from "@/components/ui/Panel";
+import { Badge } from "@/components/ui/Badge";
 
 export function IdentityPanel() {
   const runtime = useIdentityRuntime();
@@ -35,10 +36,12 @@ export function IdentityPanel() {
           Mode: {identity.mode}
         </div>
 
-        <div>
-          State: {identity.state}
-        </div>
-
+<div>
+  State:
+  <div className="mt-1">
+    <Badge>{identity.state}</Badge>
+  </div>
+</div>
         <hr className="border-slate-700/30 my-3" />
 
         <div>

@@ -39,6 +39,7 @@ import { RuntimePanelRouter } from "@/components/living-interface/RuntimePanelRo
 import { setActivePanel } from "@/runtime/runtimeUIActions";
 
 import { RuntimeOverviewPanel } from "@/components/living-interface/RuntimeOverviewPanel";
+import { Button } from "@/components/ui/Button";
 
 export default function DashboardPage() {
   const { render, trigger } = useIdentityRender();
@@ -107,60 +108,25 @@ const ui = useRuntimeUI();
 </div>
 
 
-
-<button
-  onClick={toggleSidebar}
-  className="border px-3 py-1 rounded mt-4"
->
-  Toggle Sidebar Runtime
-</button>
-
-
-<button
-  onClick={() => setActivePanel("dashboard")}
-  className="rounded border px-3 py-2"
->
-  Dashboard
-</button>
-
-
-
-
-<button
-  onClick={() => setActivePanel("executive")}
-  className="border px-3 py-1 rounded"
->
+<Button onClick={() => setActivePanel("executive")}>
   Executive Panel
-</button>
+</Button>
 
-<button
-  onClick={() => setActivePanel("business")}
-  className="border px-3 py-1 rounded ml-2"
->
+<Button onClick={() => setActivePanel("business")}>
   Business Panel
-</button>
+</Button>
 
-<button
-  onClick={() => setActivePanel("memory")}
-  className="rounded border px-3 py-2"
->
+<Button onClick={() => setActivePanel("memory")}>
   Memory Panel
-</button>
+</Button>
 
-<button
-  onClick={() => setActivePanel("living")}
-  className="rounded border px-3 py-2"
->
+<Button onClick={() => setActivePanel("living")}>
   Living Panel
-</button>
+</Button>
 
-<button
-  onClick={() => setActivePanel("identity")}
-  className="rounded border px-3 py-2"
->
+<Button onClick={() => setActivePanel("identity")}>
   Identity Panel
-</button>
-
+</Button>
 <div className="text-xs opacity-60">
   Active Panel: {ui.activePanel}
 </div>

@@ -3,6 +3,7 @@
 
 import { useLivingRuntime } from "@/runtime/useLivingRuntime";
 import { Panel } from "@/components/ui/Panel";
+import { Badge } from "@/components/ui/Badge";
 
 export function LivingRuntimePanel() {
       const runtime = useLivingRuntime();
@@ -18,8 +19,11 @@ export function LivingRuntimePanel() {
       ) : (
         <div className="space-y-2 text-sm">
           <div>
-            Life State: {snapshot.lifeState}
-          </div>
+  Life State:
+  <div className="mt-1">
+    <Badge>{snapshot.lifeState}</Badge>
+  </div>
+</div>
 
           <div>
             Energy: {snapshot.energy}

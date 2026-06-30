@@ -2,15 +2,15 @@
 "use client";
 
 import { useRuntimeSnapshot } from "@/runtime/useRuntimeSnapshot";
+import { Panel } from "@/components/ui/Panel";
+import { Badge } from "@/components/ui/Badge";
 
 export function RuntimeOverviewPanel() {
   const { snapshot } = useRuntimeSnapshot();
 
   return (
-    <div className="rounded-lg border border-cyan-700/30 p-5">
-      <h2 className="mb-4 text-lg font-semibold">
-        Runtime Overview
-      </h2>
+<Panel title="Runtime Overview">  
+      
 
       <div className="space-y-4 text-sm">
         <div>
@@ -20,14 +20,16 @@ export function RuntimeOverviewPanel() {
 
         <div>
           <strong>Memory</strong>
-          <div>Status: {snapshot.memory.systemStatus}</div>
-        </div>
+<div className="mt-1">
+  <Badge>{snapshot.memory.systemStatus}</Badge>
+</div>        </div>
 
         <div>
           <strong>Living</strong>
-          <div>Life State: {snapshot.living.lifeState}</div>
-        </div>
+<div className="mt-1">
+  <Badge>{snapshot.living.lifeState}</Badge>
+</div>        </div>
       </div>
-    </div>
+    </Panel>
   );
 }
