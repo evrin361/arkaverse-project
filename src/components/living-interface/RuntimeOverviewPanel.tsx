@@ -15,19 +15,19 @@ export function RuntimeOverviewPanel() {
       <div className="space-y-4 text-sm">
         <div>
           <strong>Identity</strong>
-          <div>{snapshot.identity.summary}</div>
+          <div>{snapshot.runtimes.identity.summary}</div>
         </div>
 
         <div>
           <strong>Memory</strong>
 <div className="mt-1">
-  <Badge>{snapshot.memory.systemStatus}</Badge>
+  <Badge>{snapshot.runtimes.memory.systemStatus}</Badge>
 </div>        </div>
 
         <div>
           <strong>Living</strong>
 <div className="mt-1">
-  <Badge>{snapshot.living.lifeState}</Badge>
+  <Badge>{snapshot.runtimes.living.lifeState}</Badge>
 </div>        </div>
       </div>
     </Panel>

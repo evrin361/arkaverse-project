@@ -3,13 +3,13 @@ import { useRuntimeSnapshot } from "@/runtime/useRuntimeSnapshot";
 export function useDashboardRuntime() {
   const { snapshot } = useRuntimeSnapshot();
 const cognitiveState =
-  snapshot.living.lifeState === "active"
+  snapshot.runtimes.living.lifeState === "active"
     ? "Operational"
     : "Standby";
 
     const systemReadiness =
-  snapshot.living.lifeState === "active" &&
-  snapshot.memory.systemStatus === "READY"
+  snapshot.runtimes.living.lifeState === "active" &&
+  snapshot.runtimes.memory.systemStatus === "READY"
     ? "Ready"
     : "Initializing";
 
@@ -17,9 +17,9 @@ const cognitiveState =
   return {
     snapshot,
 
-    identity: snapshot.identity,
-    living: snapshot.living,
-    memory: snapshot.memory,
+    identity: snapshot.runtimes.identity,
+    living: snapshot.runtimes.living,
+    memory: snapshot.runtimes.memory,
 
     cognitiveState,
     systemReadiness,

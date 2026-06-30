@@ -1,14 +1,20 @@
 
 import { runtimeRegistry } from "./runtimeRegistry";
 
-export const runtimeSnapshotCoordinator = { 
-     inspect() {
+export const runtimeSnapshotCoordinator = {
+  inspect() {
     return {
-      identity: runtimeRegistry.identity.inspect(),
+      timestamp: Date.now(),
 
-      memory: runtimeRegistry.memory.inspect(),
+      version: "v2",
 
-      living: runtimeRegistry.living.inspect(),
+      runtimes: {
+        identity: runtimeRegistry.identity.inspect(),
+
+        memory: runtimeRegistry.memory.inspect(),
+
+        living: runtimeRegistry.living.inspect(),
+      },
     };
   },
 };

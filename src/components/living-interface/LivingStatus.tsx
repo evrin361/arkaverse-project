@@ -1,7 +1,7 @@
 import { getExecutiveMission } from "@/runtime";
 import { getExecutiveIdentity } from "@/runtime";
 import { useRuntimeContext } from "@/runtime/useRuntimeContext";
-import { updateRuntimeContext } from "@/runtime/runtimeStore";
+import { dispatchRuntimeCommand } from "@/runtime/runtimeCommandCenter";
 
 export default function LivingStatus() {
 
@@ -36,10 +36,12 @@ const runtime = useRuntimeContext();
 <button
   className="mt-4 rounded bg-emerald-600 px-3 py-2 text-white hover:bg-emerald-700"
   onClick={() =>
-    updateRuntimeContext({
-      aiBusy: !runtime.aiBusy,
-    })
-  }
+  dispatchRuntimeCommand(
+    runtime.aiBusy
+      ? "STOP_RUNTIME"
+      : "START_RUNTIME"
+  )
+}
 >
   Toggle AI Busy
 </button>
