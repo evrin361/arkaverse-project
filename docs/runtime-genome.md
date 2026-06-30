@@ -363,3 +363,39 @@ Future Runtime modules must integrate with this foundation before exposing UI fe
 With Runtime Foundation v1 completed, Arkaverse finished the first stable generation of its Runtime Architecture.
 
 The next evolutionary phase focuses on the User Interface Foundation, where the stable Runtime Architecture becomes visible through a unified visual system while preserving the separation between Engine, Runtime and UI.
+
+---
+
+# UI Foundation
+
+Arkaverse now separates visual language from component implementation.
+
+The visual hierarchy follows this order:
+
+Design Tokens
+
+↓
+
+Theme
+
+↓
+
+Typography
+
+↓
+
+Reusable Components
+
+↓
+
+Runtime Panels
+
+↓
+
+Application Pages
+
+No page should define its own visual language independently.
+
+Every future interface must inherit the Design System before introducing feature-specific styling.
+
+The Design System is considered part of the Runtime Foundation because it guarantees architectural consistency across every Runtime UI.

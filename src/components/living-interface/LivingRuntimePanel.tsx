@@ -2,6 +2,7 @@
 "use client";
 
 import { useLivingRuntime } from "@/runtime/useLivingRuntime";
+import { Panel } from "@/components/ui/Panel";
 
 export function LivingRuntimePanel() {
       const runtime = useLivingRuntime();
@@ -9,10 +10,8 @@ export function LivingRuntimePanel() {
   const snapshot = runtime.snapshot;
 
   return (
-    <div className="rounded-lg border border-slate-700/30 p-5">
-      <h2 className="mb-4 text-lg font-semibold">
-        Living Core
-      </h2>
+<Panel title="Living Core">
+          
 
       {!snapshot ? (
         <div>Initializing...</div>
@@ -39,6 +38,5 @@ export function LivingRuntimePanel() {
           </div>
         </div>
       )}
-    </div>
-  );
+</Panel>  );
 }

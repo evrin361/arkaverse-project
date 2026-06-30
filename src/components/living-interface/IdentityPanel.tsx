@@ -2,6 +2,7 @@
 "use client";
 
 import { useIdentityRuntime } from "@/runtime/useIdentityRuntime";
+import { Panel } from "@/components/ui/Panel";
 
 export function IdentityPanel() {
   const runtime = useIdentityRuntime();
@@ -10,10 +11,8 @@ export function IdentityPanel() {
     runtime.snapshot;
 
   return (
-    <div className="rounded-lg border border-slate-700/30 p-5">
-      <h2 className="mb-4 text-lg font-semibold">
-        Identity Core
-      </h2>
+<Panel title="Identity Core">
+         
 
       <div className="space-y-2 text-sm">
         <div>
@@ -50,6 +49,5 @@ export function IdentityPanel() {
           Operational: {operational}
         </div>
       </div>
-    </div>
-  );
+</Panel>  );
 }
