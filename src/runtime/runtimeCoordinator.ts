@@ -1,4 +1,4 @@
-import { emitEvent } from "./eventBus";
+import { eventBus } from "./event-bus/event-bus";
 import { updateRuntimeContext } from "./runtimeStore";
 import type { ReactorEvent } from "./events";
 
@@ -29,5 +29,6 @@ export function dispatchRuntimeEvent(event: ReactorEvent) {
       break;
   }
 
-  emitEvent(event);
-}
+eventBus.emit("runtime:event", {
+  type: event,
+});}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { subscribeEvent } from "./eventBus";
+import { eventBus } from "./event-bus/event-bus";
 import { evaluateEvent } from "./executiveBrain";
 
 import type { ReactorState } from "../components/living-core/types";
@@ -12,11 +12,11 @@ export function useExecutiveBrain() {
 
   useEffect(() => {
 
-    const unsubscribe = subscribeEvent((event) => {
+    eventBus.on("runtime:event", (payload) => {
+  const event = payload.type as Parameters<typeof evaluateEvent>[0];
 
-      setState(evaluateEvent(event));
-
-    });
+  setState(evaluateEvent(event));
+});
 
 const unsubscribeRuntime = subscribeRuntime((runtime) => {
 
@@ -28,7 +28,6 @@ console.info("[EXECUTIVE]", {
 });
 
 return () => {
-  unsubscribe();
   unsubscribeRuntime();
 };
   }, []);
