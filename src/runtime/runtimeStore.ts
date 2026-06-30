@@ -21,7 +21,9 @@ export function updateRuntimeContext(
     ...partial,
   };
 
-console.log("[Runtime Updated]", runtime);
+console.info("[RUNTIME]", {
+  state: runtime,
+});
 
   listeners.forEach((listener) => listener(runtime));
 }

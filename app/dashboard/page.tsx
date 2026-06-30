@@ -40,6 +40,8 @@ import { setActivePanel } from "@/runtime/runtimeUIActions";
 
 import { RuntimeOverviewPanel } from "@/components/living-interface/RuntimeOverviewPanel";
 import { Button } from "@/components/ui/Button";
+import { useDashboardRuntime } from "@/runtime/useDashboardRuntime";
+import { RuntimeNavigation } from "@/components/navigation/RuntimeNavigation";
 
 export default function DashboardPage() {
   const { render, trigger } = useIdentityRender();
@@ -68,6 +70,7 @@ export default function DashboardPage() {
 
 
 const ui = useRuntimeUI();
+const dashboard = useDashboardRuntime();
 
   return (
     <div
@@ -90,6 +93,18 @@ const ui = useRuntimeUI();
           ARKAVERSE DASHBOARD
         </div>
 
+<div className="space-y-1 text-sm opacity-70">
+  <div>{dashboard.identity.summary}</div>
+
+  <div>
+    Cognitive State: {dashboard.cognitiveState}
+  </div>
+</div>
+
+<div>
+  System Readiness: {dashboard.systemReadiness}
+</div>
+
 <div className="mt-6">
   <LivingDashboard />
 </div>
@@ -107,26 +122,11 @@ const ui = useRuntimeUI();
   Sidebar: {ui.sidebarOpen ? "OPEN" : "CLOSED"}
 </div>
 
+<RuntimeNavigation
+  activePanel={ui.activePanel}
+  onSelect={setActivePanel}
+/>
 
-<Button onClick={() => setActivePanel("executive")}>
-  Executive Panel
-</Button>
-
-<Button onClick={() => setActivePanel("business")}>
-  Business Panel
-</Button>
-
-<Button onClick={() => setActivePanel("memory")}>
-  Memory Panel
-</Button>
-
-<Button onClick={() => setActivePanel("living")}>
-  Living Panel
-</Button>
-
-<Button onClick={() => setActivePanel("identity")}>
-  Identity Panel
-</Button>
 <div className="text-xs opacity-60">
   Active Panel: {ui.activePanel}
 </div>

@@ -20,7 +20,10 @@ export function useExecutiveBrain() {
 
 const unsubscribeRuntime = subscribeRuntime((runtime) => {
 
-  console.log("[Executive Runtime]", runtime);
+console.info("[EXECUTIVE]", {
+  runtime,
+});
+
 
 });
 
