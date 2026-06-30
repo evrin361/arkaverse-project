@@ -1,14 +1,11 @@
 "use client";
 
 import { useExecutiveMemory } from "@/runtime/useExecutiveMemory";
+import { Panel } from "@/components/ui/Panel";
 export function MemoryPanel() {
 const { lastState } = useExecutiveMemory();
   return (
-    <div className="rounded-lg border border-slate-700/30 p-5 space-y-3">
-      <div className="text-xl font-bold">
-        Memory Core
-      </div>
-
+  <Panel title="Memory Core">
       <div>
         Last Reactor State: <strong>{lastState}</strong>
       </div>
@@ -32,6 +29,6 @@ const { lastState } = useExecutiveMemory();
       <div>
         Learning State
       </div>
-    </div>
-  );
+      </Panel>
+);
 }

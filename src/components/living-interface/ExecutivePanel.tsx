@@ -2,16 +2,15 @@
 
 import { getExecutiveIdentity } from "@/runtime/executiveIdentity";
 import { getExecutiveMission } from "@/runtime/executiveMission";
+import { Panel } from "@/components/ui/Panel";
 
 export function ExecutivePanel() {
   const identity = getExecutiveIdentity();
   const mission = getExecutiveMission();
 
   return (
-    <div className="rounded-lg border border-cyan-700/30 p-5">
-      <h2 className="text-xl font-bold mb-4">
-        Executive Core
-      </h2>
+  <Panel title="Executive Core">
+      
 
       <div className="space-y-2 text-sm">
         <div>
@@ -30,6 +29,6 @@ export function ExecutivePanel() {
           <strong>Mission:</strong> {mission}
         </div>
       </div>
-    </div>
-  );
+     </Panel>
+);
 }
